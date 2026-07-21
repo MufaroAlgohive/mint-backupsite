@@ -7,7 +7,27 @@ document.addEventListener('DOMContentLoaded', () => {
             if (placeholder) {
                 placeholder.innerHTML = html;
                 
-                // Re-evaluate script tags from the injected HTML so functions are defined
+                
+                // Global scroll and theme logic
+                const isIndex = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
+                if (!isIndex) {
+                    placeholder.querySelector('#main-header').classList.add('header-dark');
+                }
+                
+                let lastScroll = window.scrollY;
+                window.addEventListener('scroll', () => {
+                    const currentScroll = window.scrollY;
+                    const header = document.getElementById('main-header');
+                    if (header) {
+                        if (currentScroll > lastScroll && currentScroll > 100) {
+                            header.classList.add('header-hidden');
+                        } else {
+                            header.classList.remove('header-hidden');
+                        }
+                    }
+                    lastScroll = currentScroll;
+                });
+\n                // Re-evaluate script tags from the injected HTML so functions are defined
                 const scripts = placeholder.querySelectorAll('script');
                 scripts.forEach(oldScript => {
                     const newScript = document.createElement('script');
