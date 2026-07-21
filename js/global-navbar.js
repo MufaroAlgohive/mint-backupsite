@@ -16,4 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+        
+    // Handle mobile menu clicks using event delegation
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('#mobile-menu-btn');
+        const closeBtn = e.target.closest('#mobile-menu-close');
+        
+        if (btn || closeBtn) {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('flex');
+            }
+        }
+    });
 });

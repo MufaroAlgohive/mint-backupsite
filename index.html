@@ -1558,20 +1558,17 @@
         window.addEventListener('scroll', () => {
             const currentScroll = window.scrollY;
             const header = document.getElementById('main-header');
-
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                header.classList.add('header-hidden');
-            } else {
-                header.classList.remove('header-hidden');
+            if (header) {
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    header.classList.add('header-hidden');
+                } else {
+                    header.classList.remove('header-hidden');
+                }
             }
             lastScroll = currentScroll;
         });
 
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        if (btn && menu) {
-            btn.addEventListener('click', () => { menu.classList.toggle('hidden'); menu.classList.toggle('flex'); });
-        }
+        // mobile menu logic moved to global-navbar.js
 
 
         gsap.registerPlugin(ScrollTrigger);
@@ -1627,38 +1624,36 @@
 
 
         tl.to("#main-header", {
-            onStart: () => document.getElementById('main-header').classList.add('header-hero-dark-text'),
-            onReverseComplete: () => document.getElementById('main-header').classList.remove('header-hero-dark-text'),
+            onStart: () => { const h = document.getElementById('main-header'); if(h) h.classList.add('header-hero-dark-text'); },
+            onReverseComplete: () => { const h = document.getElementById('main-header'); if(h) h.classList.remove('header-hero-dark-text'); },
             duration: 0.1
         }, "reveal+=0.8");
 
-
-        const mainHeader = document.getElementById('main-header');
 
         ScrollTrigger.create({
             trigger: "#blackSection",
             start: "top 80",
             end: "bottom 80",
             onEnter: () => {
-                mainHeader.classList.remove('header-dark');
-                mainHeader.classList.remove('header-hero-dark-text');
+                const mh = document.getElementById('main-header');
+                if (mh) { mh.classList.remove('header-dark'); mh.classList.remove('header-hero-dark-text'); }
             },
-            onLeave: () => mainHeader.classList.add('header-dark'),
+            onLeave: () => { const mh = document.getElementById('main-header'); if(mh) mh.classList.add('header-dark'); },
             onEnterBack: () => {
-                mainHeader.classList.remove('header-dark');
-                mainHeader.classList.remove('header-hero-dark-text');
+                const mh = document.getElementById('main-header');
+                if (mh) { mh.classList.remove('header-dark'); mh.classList.remove('header-hero-dark-text'); }
             },
-            onLeaveBack: () => mainHeader.classList.add('header-hero-dark-text')
+            onLeaveBack: () => { const mh = document.getElementById('main-header'); if(mh) mh.classList.add('header-hero-dark-text'); }
         });
 
         ScrollTrigger.create({
             trigger: "#main-footer",
             start: "top 80",
             onEnter: () => {
-                mainHeader.classList.remove('header-dark');
-                mainHeader.classList.remove('header-hero-dark-text');
+                const mh = document.getElementById('main-header');
+                if (mh) { mh.classList.remove('header-dark'); mh.classList.remove('header-hero-dark-text'); }
             },
-            onLeaveBack: () => mainHeader.classList.add('header-dark')
+            onLeaveBack: () => { const mh = document.getElementById('main-header'); if(mh) mh.classList.add('header-dark'); }
         });
 
 
@@ -1675,7 +1670,7 @@
             trigger: "#borrowSection",
             start: "top 80%",
             onEnter: () => {
-                mainHeader.classList.add('header-dark');
+                document.getElementById('main-header')?.classList.add('header-dark');
                 const media = document.getElementById('borrowVideo');
                 if (media) {
                     media.classList.add('reveal');
@@ -1684,9 +1679,9 @@
                     }
                 }
             },
-            onEnterBack: () => mainHeader.classList.add('header-dark'),
-            onLeave: () => mainHeader.classList.remove('header-dark'),
-            onLeaveBack: () => mainHeader.classList.remove('header-dark')
+            onEnterBack: () => document.getElementById('main-header')?.classList.add('header-dark'),
+            onLeave: () => document.getElementById('main-header')?.classList.remove('header-dark'),
+            onLeaveBack: () => document.getElementById('main-header')?.classList.remove('header-dark')
         });
 
         ScrollTrigger.create({
@@ -1694,18 +1689,18 @@
             start: "top 80",
             end: "bottom 80",
             onEnter: () => {
-                mainHeader.classList.remove('header-dark');
-                mainHeader.classList.remove('header-hero-dark-text');
+                document.getElementById('main-header')?.classList.remove('header-dark');
+                document.getElementById('main-header')?.classList.remove('header-hero-dark-text');
             },
             onEnterBack: () => {
-                mainHeader.classList.remove('header-dark');
-                mainHeader.classList.remove('header-hero-dark-text');
+                document.getElementById('main-header')?.classList.remove('header-dark');
+                document.getElementById('main-header')?.classList.remove('header-hero-dark-text');
             },
             onLeave: () => {
-                mainHeader.classList.add('header-dark');
+                document.getElementById('main-header')?.classList.add('header-dark');
             },
             onLeaveBack: () => {
-                mainHeader.classList.add('header-dark');
+                document.getElementById('main-header')?.classList.add('header-dark');
             }
         });
 
@@ -1719,15 +1714,15 @@
                 pin: true,
                 scrub: 1,
                 onEnter: () => {
-                    mainHeader.classList.remove('header-dark');
-                    mainHeader.classList.remove('header-hero-dark-text');
+                    document.getElementById('main-header')?.classList.remove('header-dark');
+                    document.getElementById('main-header')?.classList.remove('header-hero-dark-text');
                 },
-                onLeave: () => mainHeader.classList.add('header-dark'),
+                onLeave: () => document.getElementById('main-header')?.classList.add('header-dark'),
                 onEnterBack: () => {
-                    mainHeader.classList.remove('header-dark');
-                    mainHeader.classList.remove('header-hero-dark-text');
+                    document.getElementById('main-header')?.classList.remove('header-dark');
+                    document.getElementById('main-header')?.classList.remove('header-hero-dark-text');
                 },
-                onLeaveBack: () => mainHeader.classList.add('header-dark')
+                onLeaveBack: () => document.getElementById('main-header')?.classList.add('header-dark')
             }
         });
 
