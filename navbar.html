@@ -45,6 +45,47 @@
 #main-header.header-hero-dark-text .logo-img {
     filter: brightness(0) !important;
 }
+
+/* --- CTA BUTTON STYLE --- */
+.mint-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #f5f2ff;
+    padding: 0.35rem 0.35rem 0.35rem 1.5rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(92, 59, 207, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.mint-cta-btn:hover {
+    box-shadow: 0 10px 25px -5px rgba(92, 59, 207, 0.2);
+    transform: scale(1.02);
+}
+
+.mint-cta-icon {
+    background-color: var(--mint-primary-purple);
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mint-cta-btn:hover .mint-cta-icon svg:first-child {
+    transform: translate(2rem, -2rem);
+}
+
+.mint-cta-btn:hover .mint-cta-icon svg:last-child {
+    transform: translate(0, 0);
+}
 </style>
 <header id="main-header"
         class="fixed top-0 left-0 w-full z-50 bg-transparent border-b border-transparent transition-all duration-300">
