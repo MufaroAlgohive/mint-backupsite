@@ -8,12 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 placeholder.innerHTML = html;
                 
                 
-                // Global scroll and theme logic
-                const isIndex = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
-                if (!isIndex) {
-                    placeholder.querySelector('#main-header').classList.add('header-dark');
-                }
-                
+                // Global scroll logic
                 let lastScroll = window.scrollY;
                 window.addEventListener('scroll', () => {
                     const currentScroll = window.scrollY;
@@ -43,11 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const btn = e.target.closest('#mobile-menu-btn');
         const closeBtn = e.target.closest('#mobile-menu-close');
         
-        if (btn || closeBtn) {
-            const menu = document.getElementById('mobile-menu');
-            if (menu) {
-                menu.classList.toggle('hidden');
-                menu.classList.toggle('flex');
+        const menu = document.getElementById('mobile-menu');
+        if (menu) {
+            if (btn) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else if (closeBtn) {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
             }
         }
     });
