@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 // Navigate to index with a query param so index.html can pick it up
                 e.preventDefault();
-                window.location.href = `index.html?invest-panel=${panelIndex}#investSection`;
+                window.location.href = `/?invest-panel=${panelIndex}#investSection`;
             }
         }
 
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } else {
                 e.preventDefault();
-                window.location.href = `index.html?asset-tab=${tabName}#assetDeploymentSection`;
+                window.location.href = `/?asset-tab=${tabName}#assetDeploymentSection`;
             }
         }
     });
