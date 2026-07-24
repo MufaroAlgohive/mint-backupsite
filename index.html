@@ -701,13 +701,15 @@
 
 <body data-nav-theme="dark">
 
-    <div id="preloader" class="fixed inset-0 z-[100] flex flex-col justify-center items-center bg-[#0a0a0a]" style="display: none !important;">
+    <div id="preloader" class="fixed inset-0 z-[100] flex flex-col justify-center items-center bg-[#0a0a0a]"
+        style="display: none !important;">
         <div class="px-8 py-10 md:px-12 md:py-16 text-center">
             <h2 class="text-4xl md:text-5xl lg:text-7xl font-light text-white tracking-tight leading-tight">
                 A Wealth Manager <br class="hidden md:block" /> Built for Your Lifestyle.
             </h2>
             <div class="mt-8 flex justify-center">
-                <div class="mint-cta-btn bg-[var(--mint-dark-purple)] text-white border-none group w-fit shadow-lg shadow-purple-900/20 px-8 py-4 rounded-full">
+                <div
+                    class="mint-cta-btn bg-[var(--mint-dark-purple)] text-white border-none group w-fit shadow-lg shadow-purple-900/20 px-8 py-4 rounded-full">
                     <span class="text-sm font-semibold text-white tracking-widest uppercase">Loading...</span>
                 </div>
             </div>
@@ -725,12 +727,13 @@
             <div class="max-w-7xl mx-auto px-6 md:px-10">
                 <div class="max-w-2xl w-full">
                     <h1 class="text-4xl lg:text-6xl font-light leading-tight mb-8 shimmer-text text-white text-left">
-                        Modern Wealth Management
+                        GROW YOUR WEALTH YOUR WAY
                     </h1>
 
-                    <p class="text-lg md:text-xl text-gray-200 mb-10 font-light text-left">
-                        Build long-term wealth through professionally managed MINT Baskets while enjoying the
-                        flexibility to borrow and transact from a single platform.
+                    <p class="text-lg md:text-xl text-gray-50 mb-10 font-light text-left">
+                        For as little as R200, use MINT to invest in your future, grow your wealth through
+                        professionally managed portfolios, access credit when you need it, and look after your family,
+                        all in one platform.
                     </p>
 
                     <button onclick="checkDevice()" class="mint-cta-btn group inline-flex mb-8">
@@ -901,13 +904,8 @@
             </div>
 
             <div class="flex justify-center lg:justify-end mt-12 lg:mt-0 relative z-30">
-                <div class="relative w-full max-w-md overflow-hidden">
-                    <img src="/images/Section rocks phone.avif" alt="Phone on Rocks" loading="lazy"
-                        class="relative z-10 w-full object-contain">
-                    <img src="/images/rock.avif" alt="Rock" loading="lazy"
-                        class="absolute top-0 -right-2 w-24 md:w-32 z-20 floating-rock-1">
-                    <img src="/images/rock.avif" alt="Rock" loading="lazy"
-                        class="absolute bottom-0 -left-2 w-24 md:w-32 z-20 floating-rock-2">
+                <div class="relative w-full max-w-md overflow-hidden rounded-2xl">
+                    <video src="/videos/Sc_09.mp4" autoplay loop muted playsinline class="relative z-10 w-full object-contain"></video>
                 </div>
             </div>
 
@@ -916,24 +914,31 @@
 
 
 
-    <section class="relative overflow-hidden bg-black min-h-screen flex flex-col justify-center items-center" id="marqueeSection">
-        
+    <section class="relative overflow-hidden bg-black min-h-screen flex flex-col justify-center items-center"
+        id="marqueeSection">
+
         <!-- Video Background -->
-        <video class="absolute inset-0 w-full h-full object-cover z-0 opacity-60" src="/videos/WealthManagerLifestyle.mp4" autoplay loop muted playsinline></video>
-        
+        <video class="absolute inset-0 w-full h-full object-cover z-0 opacity-60"
+            src="/videos/WealthManagerLifestyle.mp4" autoplay loop muted playsinline></video>
+
         <!-- Slight overlay to darken video for text contrast -->
         <div class="absolute inset-0 bg-black/40 pointer-events-none z-0"></div>
 
-        <div id="marqueeContent" class="relative z-10 text-center px-6 md:px-10 max-w-4xl w-full opacity-0 translate-y-16">
+        <div id="marqueeContent"
+            class="relative z-10 text-center px-6 md:px-10 max-w-4xl w-full opacity-0 translate-y-16">
             <div class="px-8 py-10 md:px-12 md:py-16">
-                <h2 id="marqueeTitle" class="text-4xl md:text-5xl lg:text-7xl font-light text-white tracking-tight leading-tight">
+                <h2 id="marqueeTitle"
+                    class="text-4xl md:text-5xl lg:text-7xl font-light text-white tracking-tight leading-tight">
                     A Wealth Manager <br class="hidden md:block" /> Built for Your Lifestyle.
                 </h2>
                 <div id="marqueeBtn" class="mt-8 flex justify-center">
                     <button onclick="checkDevice()" class="mint-cta-btn group shadow-xl">
-                        <span class="text-sm font-bold text-[var(--mint-primary-purple)] uppercase tracking-widest pl-2">Get Started</span>
+                        <span
+                            class="text-sm font-bold text-[var(--mint-primary-purple)] uppercase tracking-widest pl-2">Get
+                            Started</span>
                         <div class="mint-cta-icon group-hover:scale-110">
-                            <svg class="transition-transform duration-300 group-hover:translate-x-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <svg class="transition-transform duration-300 group-hover:translate-x-1" width="20"
+                                height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
                         </div>
@@ -943,118 +948,165 @@
         </div>
     </section>
 
-<!-- Anchor for nav link "Open Strategies (5 Steps)" -->
-<div id="stepsSection" class="absolute" style="top: 0; visibility: hidden; height: 0;"></div>
+    <!-- Anchor for nav link "Open Strategies (5 Steps)" -->
+    <div id="stepsSection" class="absolute" style="top: 0; visibility: hidden; height: 0;"></div>
 
-<section id="investSection" class="relative z-20 flex flex-col justify-center w-full h-screen overflow-hidden bg-white" style="position: relative;">
-            <div id="investHorizontalContainer" class="flex flex-row flex-nowrap w-full h-full items-center overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth relative z-10">
-                
-                <!-- Panel 1: MINT Baskets -->
-                <div class="min-w-full w-full h-full flex flex-col justify-center snap-center overflow-y-auto">
-                    <div class="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-16 items-center w-full py-16 md:py-24 my-auto">
-                        <!-- Text -->
-                        <div class="flex flex-col justify-center">
-                            <h2 class="text-3xl md:text-5xl lg:text-6xl font-light text-black tracking-tight leading-tight mb-4 md:mb-8">
-                                MINT Baskets
-                            </h2>
-                            <div class="flex flex-col gap-3 md:gap-6 text-gray-600 text-base md:text-xl font-light leading-relaxed">
-                                <p><strong>Effortless Diversification:</strong> MINT Baskets are ready-built, professionally managed portfolios tailored to various risk appetites, saving you the time and effort of analyzing individual markets.</p>
-                                <p><strong>Strategic Growth with Direct Ownership:</strong> They provide a simple, precision-designed vehicle to navigate market shifts and grow your wealth, while ensuring you retain full ownership of the underlying assets.</p>
-                            </div>
+    <section id="investSection"
+        class="relative z-20 flex flex-col justify-center w-full h-screen overflow-hidden bg-white"
+        style="position: relative;">
+        <div id="investHorizontalContainer"
+            class="flex flex-row flex-nowrap w-full h-full items-center overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth relative z-10">
+
+            <!-- Panel 1: MINT Baskets -->
+            <div class="min-w-full w-full h-full flex flex-col justify-center snap-center overflow-y-auto">
+                <div
+                    class="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-16 items-center w-full py-16 md:py-24 my-auto">
+                    <!-- Text -->
+                    <div class="flex flex-col justify-center">
+                        <h2
+                            class="text-3xl md:text-5xl lg:text-6xl font-light text-black tracking-tight leading-tight mb-4 md:mb-8">
+                            MINT Baskets
+                        </h2>
+                        <div
+                            class="flex flex-col gap-3 md:gap-6 text-gray-600 text-base md:text-xl font-light leading-relaxed">
+                            <p>MINT Baskets are ready-built, professionally managed portfolios that make investing
+                                simpler. You have portfolio options to choose from that match your goals, and your
+                                comfort, tailored to various risk appetites , without having to research and select
+                                individual investments yourself.
+                            </p>
+                            <p>You get a diversified portfolio, managed by experienced investment professionals, while
+                                retaining ownership of the underlying assets.</p>
                         </div>
-                        <!-- GIF -->
-                        <div class="flex flex-col justify-center items-center h-full w-full">
-                            <div class="relative inline-flex flex-col items-center justify-center w-full sm:max-w-xs md:max-w-sm">
-                                <!-- Top Left: Profile Icon -->
-                                <div class="absolute top-4 left-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                                    </svg>
-                                </div>
-                                
-                                <!-- Top Right: Cart Icon with Notification -->
-                                <div class="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                                    </svg>
-                                    <!-- Notification Badge -->
-                                    <div class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
-                                        3
-                                    </div>
-                                </div>
-
-                                <img src="/videos/Comp%201_1.gif" alt="MINT Baskets" loading="eager" class="w-full h-auto rounded-2xl object-contain relative z-0">
+                    </div>
+                    <!-- GIF -->
+                    <div class="flex flex-col justify-center items-center h-full w-full">
+                        <div
+                            class="relative inline-flex flex-col items-center justify-center w-full sm:max-w-xs md:max-w-sm">
+                            <!-- Top Left: Profile Icon -->
+                            <div
+                                class="absolute top-4 left-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                </svg>
                             </div>
+
+                            <!-- Top Right: Cart Icon with Notification -->
+                            <div
+                                class="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                                <!-- Notification Badge -->
+                                <div
+                                    class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+                                    3
+                                </div>
+                            </div>
+
+                            <img src="/videos/Comp%201_1.gif" alt="MINT Baskets" loading="eager"
+                                class="w-full h-auto rounded-2xl object-contain relative z-0">
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Panel 2: Mint Gift -->
-                <div class="min-w-full w-full h-full flex flex-col justify-center snap-center overflow-y-auto">
-                    <div class="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-16 items-center w-full py-16 md:py-24 my-auto">
-                        <!-- Text -->
-                        <div class="flex flex-col justify-center">
-                            <h2 class="text-3xl md:text-5xl lg:text-6xl font-light text-black tracking-tight leading-tight mb-4 md:mb-8">
-                                MINT Gift
-                            </h2>
-                            <div class="flex flex-col gap-3 md:gap-6 text-gray-600 text-base md:text-xl font-light leading-relaxed">
-                                <p>With MINT Gifting, you can gift a tailored MINT Basket to celebrate a birthday, graduation, new job, wedding, or the arrival of a child. It transforms a special moment into an opportunity for long term financial growth.</p>
-                                <p>Unlike traditional gifts that lose value over time, a MINT Basket has the potential to grow, helping your loved ones build wealth and work towards their future goals. Because the best gifts are not just enjoyed. They grow.</p>
-                            </div>
+            <!-- Panel 2: Mint Gift -->
+            <div class="min-w-full w-full h-full flex flex-col justify-center snap-center overflow-y-auto">
+                <div
+                    class="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-16 items-center w-full py-16 md:py-24 my-auto">
+                    <!-- Text -->
+                    <div class="flex flex-col justify-center">
+                        <h2
+                            class="text-3xl md:text-5xl lg:text-6xl font-light text-black tracking-tight leading-tight mb-4 md:mb-8">
+                            MINT Gift
+                        </h2>
+                        <div
+                            class="flex flex-col gap-3 md:gap-6 text-gray-600 text-base md:text-xl font-light leading-relaxed">
+                            <p>With MINT Gifting, you can gift a tailored MINT Basket for a birthday, graduation, new
+                                job, wedding, or any moment worth celebrating, turning a special occasion into an
+                                opportunity for long term financial growth. You can also contribute regularly, helping
+                                turn a single gift into an investment that keeps growing towards the future.</p>
+                            <p>Unlike traditional gifts that lose value over time, a MINT Basket has the potential to
+                                grow. Because the best gifts are not just enjoyed. They grow.</p>
                         </div>
-                        <!-- GIF with Icons -->
-                        <div class="flex flex-col justify-center items-center h-full w-full">
-                            <div class="relative inline-flex flex-col items-center justify-center w-full sm:max-w-xs md:max-w-sm">
-                                <!-- Top Left: Profile Icon -->
-                                <div class="absolute top-4 left-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                                    </svg>
-                                </div>
-                                
-                                <!-- Top Right: Gift Icon with Notification -->
-                                <div class="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <polyline points="20 12 20 22 4 22 4 12"></polyline>
-                                        <rect x="2" y="7" width="20" height="5"></rect>
-                                        <line x1="12" y1="22" x2="12" y2="7"></line>
-                                        <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
-                                        <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
-                                    </svg>
-                                    <!-- Notification Badge -->
-                                    <div class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
-                                        1
-                                    </div>
-                                </div>
-
-                                <img src="/videos/Comp%201_3.gif" alt="MINT Gift" loading="eager" class="w-full h-auto rounded-2xl object-contain relative z-0">
+                    </div>
+                    <!-- GIF with Icons -->
+                    <div class="flex flex-col justify-center items-center h-full w-full">
+                        <div
+                            class="relative inline-flex flex-col items-center justify-center w-full sm:max-w-xs md:max-w-sm">
+                            <!-- Top Left: Profile Icon -->
+                            <div
+                                class="absolute top-4 left-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                </svg>
                             </div>
+
+                            <!-- Top Right: Gift Icon with Notification -->
+                            <div
+                                class="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                                    <rect x="2" y="7" width="20" height="5"></rect>
+                                    <line x1="12" y1="22" x2="12" y2="7"></line>
+                                    <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                                    <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                                </svg>
+                                <!-- Notification Badge -->
+                                <div
+                                    class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+                                    1
+                                </div>
+                            </div>
+
+                            <img src="/videos/Comp%201_3.gif" alt="MINT Gift" loading="eager"
+                                class="w-full h-auto rounded-2xl object-contain relative z-0">
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
 
-            <!-- Carousel Navigation UI -->
-            <div class="absolute bottom-12 left-0 w-full z-30 pointer-events-auto flex flex-col items-center gap-6" id="carouselNavUI">
-                <!-- Pagination Dots -->
-                <div class="flex items-center gap-3" id="carouselPagination">
-                    <button class="w-2.5 h-2.5 rounded-full bg-[#D4AF37] transition-all duration-300" onclick="scrollCarouselTo(0)" aria-label="Go to slide 1"></button>
-                    <button class="w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" onclick="scrollCarouselTo(1)" aria-label="Go to slide 2"></button>
-                </div>
-                <!-- Navigation Arrows -->
-                <div class="flex items-center gap-12">
-                    <button onclick="scrollCarouselBy(-1)" class="p-2 text-gray-400 hover:text-black transition-colors" aria-label="Previous slide">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"></path></svg>
-                    </button>
-                    <button onclick="scrollCarouselBy(1)" class="p-2 text-gray-400 hover:text-black transition-colors" aria-label="Next slide">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"></path></svg>
-                    </button>
-                </div>
+
+
+        </div>
+
+        <!-- Carousel Navigation UI -->
+        <div class="absolute bottom-12 left-0 w-full z-30 pointer-events-auto flex flex-col items-center gap-6"
+            id="carouselNavUI">
+            <!-- Pagination Dots -->
+            <div class="flex items-center gap-3" id="carouselPagination">
+                <button class="w-2.5 h-2.5 rounded-full bg-[#D4AF37] transition-all duration-300"
+                    onclick="scrollCarouselTo(0)" aria-label="Go to slide 1"></button>
+                <button class="w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
+                    onclick="scrollCarouselTo(1)" aria-label="Go to slide 2"></button>
             </div>
-        </section>
+            <!-- Navigation Arrows -->
+            <div class="flex items-center gap-12">
+                <button onclick="scrollCarouselBy(-1)" class="p-2 text-gray-400 hover:text-black transition-colors"
+                    aria-label="Previous slide">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+                <button onclick="scrollCarouselBy(1)" class="p-2 text-gray-400 hover:text-black transition-colors"
+                    aria-label="Next slide">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -1078,25 +1130,20 @@
 
                         <div id="content-news" class="tab-content block animate-fade-in">
                             <p class="text-white/90 text-lg md:text-xl font-light leading-relaxed mb-4">
-                                Stay ahead of market volatility with Daily Intelligence Briefings. We distill complex
-                                global events—from shifting interest rates to geopolitical movements—into actionable
-                                insights. Understand exactly how the world’s headlines influence your portfolio’s
-                                performance, empowering you to make informed decisions with professional-grade clarity.
-                            </p>
-                            <p class="text-white/90 text-lg md:text-xl font-light leading-relaxed">
-                                Receive real-time updates and deep dives into the sectors that matter most to your
-                                bottom line. We filter out the noise, delivering highly relevant financial news straight
-                                to your dashboard.
+                                We filter out the noise and bring the financial news that matters most to you, straight
+                                to your dashboard. Daily, we break down major global events, from interest rate changes,
+                                markets, to geopolitical developments, and show you what they could mean for your
+                                investments.
                             </p>
                         </div>
 
                         <div id="content-goals" class="tab-content hidden">
                             <p class="text-white/90 text-lg md:text-xl font-light leading-relaxed">
-                                Wealth creation is more than just numbers—it’s about the milestones that matter. With
-                                MINT, you can deploy Objective-Based Portfolios tailored to your unique timeline.
-                                Whether you're targeting a specific asset today or mapping out a long-term legacy, our
-                                flexible goal-setting tools allow you to track progress in real-time, adjust your
-                                strategy at any phase, and align every investment with your personal vision.
+                                Building wealth starts with knowing what you're building towards. With MINT, you can set
+                                your goals and invest towards them, whether you're saving for something you want soon or
+                                planning for a long-term financial goal.
+                                Track your progress as you invest in real time, see how you're moving towards your
+                                goals, and adjust along the way as your plans change.
                             </p>
                         </div>
                     </div>
@@ -1144,7 +1191,9 @@
                 </div>
 
                 <div class="flex justify-center lg:justify-end items-end h-full">
-                    <video src="/videos/Comp 1.mp4" autoplay loop muted playsinline class="max-h-[40vh] md:max-h-[50vh] xl:max-h-[60vh] object-contain ml-auto rounded-2xl" id="borrowVideo"></video>
+                    <video src="/videos/Comp 1.mp4" autoplay loop muted playsinline
+                        class="max-h-[40vh] md:max-h-[50vh] xl:max-h-[60vh] object-contain ml-auto rounded-2xl"
+                        id="borrowVideo"></video>
                 </div>
             </div>
 
@@ -1152,7 +1201,7 @@
                 class="w-full rounded-[2rem] overflow-hidden relative shadow-sm aspect-[4/5] md:aspect-[12/5] group cursor-pointer hover:-translate-y-2 transition-transform duration-500 z-20">
                 <div class="absolute inset-0 z-10 pointer-events-none transition-colors duration-500 group-hover:bg-black/10"
                     style="background-color: rgba(0,0,0,0.17);"></div>
-                <img src="/images/Borrow Image.avif" alt="Borrow Portfolio" loading="lazy"
+                <img src="/images/Borrow Image.png" alt="Borrow Portfolio" loading="lazy"
                     class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 relative z-0">
 
                 <div
@@ -1228,8 +1277,8 @@
                     <h2 class="text-6xl md:text-9xl font-light text-white tracking-tighter leading-none mb-8">Transact
                     </h2>
                     <p class="text-white/80 text-lg md:text-2xl font-light leading-relaxed mb-12 max-w-2xl">
-                        This pillar focuses on creating new ways for users to win in payments, positioning MINT at the
-                        centre of real-time money movement.
+                        This pillar focuses on creating smarter ways for users to make and receive payments, while
+                        positioning MINT as a central platform for moving money in real time.
                     </p>
 
                     <div
@@ -1301,8 +1350,8 @@
                 <div>
                     <h4 class="text-white font-semibold mb-6">Quick Links</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
-                        <li><a href="/"
-                                class="hover:text-[var(--mint-primary-purple)] transition-colors">Personal</a></li>
+                        <li><a href="/" class="hover:text-[var(--mint-primary-purple)] transition-colors">Personal</a>
+                        </li>
                         <li><a href="/business"
                                 class="hover:text-[var(--mint-primary-purple)] transition-colors">Business</a></li>
                         <li><a href="/about" class="hover:text-[var(--mint-primary-purple)] transition-colors">About
@@ -1525,8 +1574,8 @@
 
 
         tl.to("#main-header-placeholder", {
-            onStart: () => { const h = document.getElementById('main-header'); if(h) h.classList.add('header-hero-dark-text'); },
-            onReverseComplete: () => { const h = document.getElementById('main-header'); if(h) h.classList.remove('header-hero-dark-text'); },
+            onStart: () => { const h = document.getElementById('main-header'); if (h) h.classList.add('header-hero-dark-text'); },
+            onReverseComplete: () => { const h = document.getElementById('main-header'); if (h) h.classList.remove('header-hero-dark-text'); },
             duration: 0.1
         }, "reveal+=0.8");
 
@@ -1539,12 +1588,12 @@
                 const mh = document.getElementById('main-header');
                 if (mh) { mh.classList.remove('header-dark'); mh.classList.remove('header-hero-dark-text'); }
             },
-            onLeave: () => { const mh = document.getElementById('main-header'); if(mh) mh.classList.add('header-dark'); },
+            onLeave: () => { const mh = document.getElementById('main-header'); if (mh) mh.classList.add('header-dark'); },
             onEnterBack: () => {
                 const mh = document.getElementById('main-header');
                 if (mh) { mh.classList.remove('header-dark'); mh.classList.remove('header-hero-dark-text'); }
             },
-            onLeaveBack: () => { const mh = document.getElementById('main-header'); if(mh) mh.classList.add('header-hero-dark-text'); }
+            onLeaveBack: () => { const mh = document.getElementById('main-header'); if (mh) mh.classList.add('header-hero-dark-text'); }
         });
 
         ScrollTrigger.create({
@@ -1554,7 +1603,7 @@
                 const mh = document.getElementById('main-header');
                 if (mh) { mh.classList.remove('header-dark'); mh.classList.remove('header-hero-dark-text'); }
             },
-            onLeaveBack: () => { const mh = document.getElementById('main-header'); if(mh) mh.classList.add('header-dark'); }
+            onLeaveBack: () => { const mh = document.getElementById('main-header'); if (mh) mh.classList.add('header-dark'); }
         });
 
 
@@ -1629,24 +1678,24 @@
 
         // 2. Slide in text box
         marqueeTl.to("#marqueeContent", { y: "0px", opacity: 1, duration: 1.5, ease: "power2.out" });
-        
-        // 3. Pause so user can see it
-        marqueeTl.to({}, {duration: 2});
 
-        
-        
+        // 3. Pause so user can see it
+        marqueeTl.to({}, { duration: 2 });
+
+
+
         // --- Carousel Logic ---
         const container = document.getElementById('investHorizontalContainer');
         const dots = document.querySelectorAll('#carouselPagination button');
-        
+
         function updatePagination() {
-            if(!container) return;
+            if (!container) return;
             const scrollLeft = container.scrollLeft;
             const clientWidth = container.clientWidth;
             const activeIndex = Math.round(scrollLeft / clientWidth);
-            
+
             dots.forEach((dot, index) => {
-                if(index === activeIndex) {
+                if (index === activeIndex) {
                     dot.classList.add('bg-[#D4AF37]');
                     dot.classList.remove('bg-gray-300');
                 } else {
@@ -1655,19 +1704,19 @@
                 }
             });
         }
-        
+
         if (container) {
             container.addEventListener('scroll', updatePagination);
         }
-        
-        window.scrollCarouselBy = function(direction) {
+
+        window.scrollCarouselBy = function (direction) {
             if (container) {
                 const clientWidth = container.clientWidth;
                 container.scrollBy({ left: direction * clientWidth, behavior: 'smooth' });
             }
         }
-        
-        window.scrollCarouselTo = function(index) {
+
+        window.scrollCarouselTo = function (index) {
             if (container) {
                 const clientWidth = container.clientWidth;
                 container.scrollTo({ left: index * clientWidth, behavior: 'smooth' });
@@ -1709,12 +1758,12 @@
                 const isClick = e && e.type === 'click';
                 const target = isClick ? e.target.closest('a[href="#mintGifting"]') : true;
                 if (isClick && !target) return;
-                
+
                 if (isClick) e.preventDefault();
-                
+
                 const stepsSection = document.getElementById('stepsSection');
                 const container = document.getElementById('investHorizontalContainer');
-                
+
                 if (stepsSection && container) {
                     stepsSection.scrollIntoView({ behavior: 'smooth' });
                     setTimeout(() => {
