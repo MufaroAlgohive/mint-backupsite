@@ -1166,6 +1166,130 @@
         </div>
     </section>
 
+    <!-- HERO SECTION (Copied from credit.html) -->
+    <section id="hero-section-credit"
+        class="relative min-h-screen pt-32 pb-24 overflow-hidden flex flex-col items-center justify-center text-center px-6 bg-[url('/images/CreditHome.avif')] bg-cover bg-center bg-no-repeat bg-fixed">
+        <!-- Optional dark overlay to ensure white text is readable against the image -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/60 to-[#0A0A0A] z-0"></div>
+
+        <div class="relative z-10 w-full flex flex-col items-center transform -translate-y-[45px]">
+            <h1 class="text-5xl md:text-7xl font-semibold tracking-tight text-white mb-4">
+                Compare credit offers.
+            </h1>
+
+            <button
+                class="mint-cta-btn bg-[#f5f2ff] border border-[rgba(92,59,207,0.15)] group mt-8 z-20 relative rounded-full flex items-center gap-6 pl-6 pr-1 py-1 hover:shadow-[0_10px_25px_-5px_rgba(92,59,207,0.2)] hover:scale-[1.02] transition-all duration-300">
+                <span class="text-sm font-semibold text-[var(--mint-primary-purple)] uppercase tracking-wide">View Your
+                    Offers</span>
+                <div class="mint-cta-icon bg-[var(--mint-primary-purple)] text-white shadow-sm flex items-center justify-center rounded-full relative overflow-hidden"
+                    style="width: 2.5rem; height: 2.5rem;">
+                    <svg class="transition-transform duration-300 group-hover:translate-x-8 group-hover:-translate-y-8"
+                        width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M7 17l10-10M7 7h10v10" />
+                    </svg>
+                    <svg class="absolute -translate-x-8 translate-y-8 transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0"
+                        width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M7 17l10-10M7 7h10v10" />
+                    </svg>
+                </div>
+            </button>
+            <!-- ALL-IN-ONE OVERVIEW SECTION -->
+            <div class="mt-16 w-full relative z-20 transform translate-y-[33px]" id="allInOneSection">
+                <div class="max-w-7xl mx-auto px-6 md:px-10 flex flex-col items-center justify-center text-center">
+
+                    <!-- Split Screen Content -->
+                    <div class="w-full max-w-5xl relative flex flex-col md:flex-row items-stretch justify-center"
+                        id="splitScreenContent">
+
+                        <!-- Center Faded Divider -->
+                        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-white/20 to-transparent transform -translate-x-1/2 opacity-0 transition-opacity duration-1000"
+                            id="centerDivider"></div>
+
+                        <!-- Left Side (Secured Credit) -->
+                        <div class="w-full md:w-1/2 md:pr-[50px] text-left md:text-right flex flex-col justify-center opacity-0 transition-all duration-1000 translate-y-8"
+                            id="leftContent">
+                            <h4 class="text-3xl font-semibold text-white mb-4">Secured Credit</h4>
+                            <p id="secured-blurb-idx"
+                                class="text-gray-50 text-lg font-light leading-relaxed line-clamp-2 md:line-clamp-none transition-all duration-300">
+                                Need access to cash without selling your investments? Use your existing investments as
+                                security for credit, giving you access to funds when you need them while your
+                                investments stay invested and continue working towards your long term goals.
+                            </p>
+                            <button
+                                onclick="document.getElementById('secured-blurb-idx').classList.toggle('line-clamp-2'); this.innerHTML = this.innerHTML.includes('Read more') ? 'Read less' : 'Read more <svg class=\'w-4 h-4 transition-transform group-hover:translate-x-1\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\'><path d=\'M5 12h14M12 5l7 7-7 7\'/></svg>'"
+                                class="md:hidden inline-flex items-center gap-2 mt-4 text-sm font-medium text-white/80 hover:text-white transition-colors group focus:outline-none">
+                                Read more
+                                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Right Side (Unsecured Credit) -->
+                        <div class="w-full md:w-1/2 md:pl-[50px] text-left flex flex-col justify-center opacity-0 transition-all duration-1000 translate-y-8 mt-12 md:mt-0"
+                            id="rightContent">
+                            <h4 class="text-3xl font-semibold text-white mb-4">Unsecured Credit</h4>
+                            <p id="unsecured-blurb-idx"
+                                class="text-gray-50 text-lg font-light leading-relaxed line-clamp-2 md:line-clamp-none transition-all duration-300">
+                                Access multiple loan offers in one place through our integrated marketplace. With a
+                                single credit check, you can instantly view customised offers from trusted providers
+                                side by side, compare your options, and choose what works for you.
+                            </p>
+                            <button
+                                onclick="document.getElementById('unsecured-blurb-idx').classList.toggle('line-clamp-2'); this.innerHTML = this.innerHTML.includes('Read more') ? 'Read less' : 'Read more <svg class=\'w-4 h-4 transition-transform group-hover:translate-x-1\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\'><path d=\'M5 12h14M12 5l7 7-7 7\'/></svg>'"
+                                class="md:hidden inline-flex items-center gap-2 mt-4 text-sm font-medium text-white/80 hover:text-white transition-colors group focus:outline-none">
+                                Read more
+                                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inline Script for Intersection Observer Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Fade in the divider
+                        const divider = document.getElementById('centerDivider');
+                        if (divider) {
+                            setTimeout(() => {
+                                divider.style.opacity = '1';
+                            }, 600);
+                        }
+
+                        // Fade in left and right content
+                        const leftContent = document.getElementById('leftContent');
+                        const rightContent = document.getElementById('rightContent');
+                        if (leftContent && rightContent) {
+                            setTimeout(() => {
+                                leftContent.style.transform = 'translateY(0)';
+                                leftContent.style.opacity = '1';
+                                rightContent.style.transform = 'translateY(0)';
+                                rightContent.style.opacity = '1';
+                            }, 800);
+                        }
+
+                        // Unobserve after animating
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            const section = document.getElementById('allInOneSection');
+            if (section) observer.observe(section);
+        });
+    </script>
+
     <section id="borrowSection" class="py-24 md:py-32 relative bg-white z-20 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 md:px-10 flex flex-col gap-16 relative">
 
