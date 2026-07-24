@@ -700,6 +700,51 @@
 </head>
 
 <body data-nav-theme="dark">
+    <style>
+        #video-preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+    <div id="video-preloader">
+        <video id="preloader-video" muted playsinline class="w-64 md:w-96">
+            <source src="/videos/MINT LogoReveal.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script>
+        document.body.style.overflow = "hidden";
+        window.preloaderFinished = false;
+        
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('video-preloader');
+            const video = document.getElementById('preloader-video');
+            
+            if (preloader && video) {
+                video.play();
+                
+                video.onended = () => {
+                    preloader.style.opacity = '0';
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                        window.preloaderFinished = true;
+                        window.dispatchEvent(new Event('preloaderComplete'));
+                        
+                        if (window.scrollY < 50 && typeof startAutoplay === 'function' && !window.slotStarted) {
+                            startAutoplay();
+                            window.slotStarted = true;
+                        }
+                    }, 1000);
+                };
+            }
+        });
+    </script>
 
 
 
@@ -1583,7 +1628,7 @@
                 pin: true,
                 anticipatePin: 1,
                 onEnter: () => {
-                    if (!window.slotStarted) {
+                    if (!window.slotStarted && window.preloaderFinished) {
                         startAutoplay();
                         window.slotStarted = true;
                     }

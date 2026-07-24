@@ -275,7 +275,46 @@
     </style>
 </head>
 <body data-nav-theme="light">
-
+    <style>
+        #video-preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+    <div id="video-preloader">
+        <video id="preloader-video" muted playsinline class="w-64 md:w-96">
+            <source src="/videos/MINT LogoReveal.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script>
+        document.body.style.overflow = "hidden";
+        window.preloaderFinished = false;
+        
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('video-preloader');
+            const video = document.getElementById('preloader-video');
+            
+            if (preloader && video) {
+                video.play();
+                
+                video.onended = () => {
+                    preloader.style.opacity = '0';
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                        window.preloaderFinished = true;
+                        window.dispatchEvent(new Event('preloaderComplete'));
+                    }, 1000);
+                };
+            }
+        });
+    </script>
 
         
    <div id="main-header-placeholder"></div>
@@ -633,7 +672,7 @@
         const pillars = document.querySelectorAll('.pillar');
         const carouselItems = document.querySelectorAll('.carousel-item');
 
-        window.addEventListener('load', () => {
+        window.addEventListener('preloaderComplete', () => {
             gsap.from("#heroSection h1", {
                 y: 40,
                 opacity: 0,
