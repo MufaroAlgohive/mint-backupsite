@@ -1529,8 +1529,8 @@
         gsap.registerPlugin(ScrollTrigger);
 
 
-        gsap.set(".bg-text-layer", { yPercent: 150, filter: "blur(12px)" });
-        gsap.set(".txt-inv", { yPercent: 0, filter: "blur(0px)" });
+        gsap.set(".bg-text-layer", { yPercent: 150 });
+        gsap.set(".txt-inv", { yPercent: 0 });
         gsap.set("#investTitleWrapper", { y: "100%" });
         gsap.set("#investLeft", { xPercent: -150, opacity: 0 });
         gsap.set("#investRight", { xPercent: 150, opacity: 0 });
@@ -1546,9 +1546,9 @@
                 currentTextIndex = (currentTextIndex + 1) % texts.length;
                 let next = texts[currentTextIndex];
 
-                gsap.to(prev, { yPercent: -150, filter: "blur(15px)", duration: 1.2, ease: "power2.inOut" });
+                gsap.to(prev, { yPercent: -150, duration: 1.2, ease: "power2.inOut" });
                 gsap.set(next, { yPercent: 150 });
-                gsap.to(next, { yPercent: 0, filter: "blur(0px)", duration: 1.2, ease: "power2.inOut" });
+                gsap.to(next, { yPercent: 0, duration: 1.2, ease: "power2.inOut" });
             }, 3000);
         }
 
