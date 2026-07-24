@@ -718,32 +718,40 @@
         </video>
     </div>
     <script>
-        document.body.style.overflow = "hidden";
         window.preloaderFinished = false;
-        
-        window.addEventListener('load', () => {
-            const preloader = document.getElementById('video-preloader');
-            const video = document.getElementById('preloader-video');
-            
-            if (preloader && video) {
-                video.play();
+        const preloader = document.getElementById('video-preloader');
+        const video = document.getElementById('preloader-video');
+
+        function hidePreloader() {
+            if (!preloader) return;
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                window.preloaderFinished = true;
+                window.dispatchEvent(new Event('preloaderComplete'));
                 
-                video.onended = () => {
-                    preloader.style.opacity = '0';
-                    setTimeout(() => {
-                        preloader.style.display = 'none';
-                        document.body.style.overflow = 'auto';
-                        window.preloaderFinished = true;
-                        window.dispatchEvent(new Event('preloaderComplete'));
-                        
-                        if (window.scrollY < 50 && typeof startAutoplay === 'function' && !window.slotStarted) {
-                            startAutoplay();
-                            window.slotStarted = true;
-                        }
-                    }, 1000);
-                };
+                if (typeof startAutoplay === 'function' && !window.slotStarted && window.scrollY < 50) {
+                    startAutoplay();
+                    window.slotStarted = true;
+                }
+            }, 500);
+        }
+
+        if (document.readyState === 'complete') {
+            if (preloader) preloader.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            window.preloaderFinished = true;
+            window.dispatchEvent(new Event('preloaderComplete'));
+            if (typeof startAutoplay === 'function' && !window.slotStarted && window.scrollY < 50) {
+                startAutoplay();
+                window.slotStarted = true;
             }
-        });
+        } else {
+            document.body.style.overflow = "hidden";
+            if (video) video.play();
+            window.addEventListener('load', hidePreloader);
+        }
     </script>
 
 
