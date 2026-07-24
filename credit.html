@@ -104,54 +104,79 @@
                 Compare credit offers.
             </h1>
 
-            <button class="mint-cta-btn bg-[#f5f2ff] border border-[rgba(92,59,207,0.15)] group mt-8 z-20 relative rounded-full flex items-center gap-6 pl-6 pr-1 py-1 hover:shadow-[0_10px_25px_-5px_rgba(92,59,207,0.2)] hover:scale-[1.02] transition-all duration-300">
-                <span class="text-sm font-semibold text-[var(--mint-primary-purple)] uppercase tracking-wide">View Your Offers</span>
-                <div class="mint-cta-icon bg-[var(--mint-primary-purple)] text-white shadow-sm flex items-center justify-center rounded-full relative overflow-hidden" style="width: 2.5rem; height: 2.5rem;">
-                    <svg class="transition-transform duration-300 group-hover:translate-x-8 group-hover:-translate-y-8" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <button
+                class="mint-cta-btn bg-[#f5f2ff] border border-[rgba(92,59,207,0.15)] group mt-8 z-20 relative rounded-full flex items-center gap-6 pl-6 pr-1 py-1 hover:shadow-[0_10px_25px_-5px_rgba(92,59,207,0.2)] hover:scale-[1.02] transition-all duration-300">
+                <span class="text-sm font-semibold text-[var(--mint-primary-purple)] uppercase tracking-wide">View Your
+                    Offers</span>
+                <div class="mint-cta-icon bg-[var(--mint-primary-purple)] text-white shadow-sm flex items-center justify-center rounded-full relative overflow-hidden"
+                    style="width: 2.5rem; height: 2.5rem;">
+                    <svg class="transition-transform duration-300 group-hover:translate-x-8 group-hover:-translate-y-8"
+                        width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                         <path d="M7 17l10-10M7 7h10v10" />
                     </svg>
-                    <svg class="absolute -translate-x-8 translate-y-8 transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <svg class="absolute -translate-x-8 translate-y-8 transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0"
+                        width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                         <path d="M7 17l10-10M7 7h10v10" />
                     </svg>
                 </div>
             </button>
-        <!-- ALL-IN-ONE OVERVIEW SECTION -->
-        <div class="mt-16 w-full relative z-20 transform translate-y-[33px]" id="allInOneSection">
-            <div class="max-w-7xl mx-auto px-6 md:px-10 flex flex-col items-center justify-center text-center">
-            
-            <!-- Split Screen Content -->
-            <div class="w-full max-w-5xl relative flex flex-col md:flex-row items-stretch justify-center" id="splitScreenContent">
-                
-                <!-- Center Faded Divider -->
-                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-white/20 to-transparent transform -translate-x-1/2 opacity-0 transition-opacity duration-1000" id="centerDivider"></div>
+            <!-- ALL-IN-ONE OVERVIEW SECTION -->
+            <div class="mt-16 w-full relative z-20 transform translate-y-[33px]" id="allInOneSection">
+                <div class="max-w-7xl mx-auto px-6 md:px-10 flex flex-col items-center justify-center text-center">
 
-                <!-- Left Side (Secured Credit) -->
-                <div class="w-full md:w-1/2 md:pr-[50px] text-left md:text-right flex flex-col justify-center opacity-0 transition-all duration-1000 translate-y-8" id="leftContent">
-                    <h4 class="text-3xl font-semibold text-white mb-4">Secured Credit</h4>
-                    <p id="secured-blurb" class="text-gray-400 text-lg font-light leading-relaxed line-clamp-2 md:line-clamp-none transition-all duration-300">
-                        Borrow against your existing investments as collateral. Gain instant liquidity without needing to sell your assets, maintaining your long-term growth while meeting your short-term needs.
-                    </p>
-                    <button onclick="document.getElementById('secured-blurb').classList.toggle('line-clamp-2'); this.innerHTML = this.innerHTML.includes('Read more') ? 'Read less' : 'Read more <svg class=\'w-4 h-4 transition-transform group-hover:translate-x-1\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\'><path d=\'M5 12h14M12 5l7 7-7 7\'/></svg>'" class="md:hidden inline-flex items-center gap-2 mt-4 text-sm font-medium text-white/80 hover:text-white transition-colors group focus:outline-none">
-                        Read more
-                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </button>
+                    <!-- Split Screen Content -->
+                    <div class="w-full max-w-5xl relative flex flex-col md:flex-row items-stretch justify-center"
+                        id="splitScreenContent">
+
+                        <!-- Center Faded Divider -->
+                        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-white/20 to-transparent transform -translate-x-1/2 opacity-0 transition-opacity duration-1000"
+                            id="centerDivider"></div>
+
+                        <!-- Left Side (Secured Credit) -->
+                        <div class="w-full md:w-1/2 md:pr-[50px] text-left md:text-right flex flex-col justify-center opacity-0 transition-all duration-1000 translate-y-8"
+                            id="leftContent">
+                            <h4 class="text-3xl font-semibold text-white mb-4">Secured Credit</h4>
+                            <p id="secured-blurb"
+                                class="text-gray-50 text-lg font-light leading-relaxed line-clamp-2 md:line-clamp-none transition-all duration-300">
+                                Need access to cash without selling your investments? Use your existing investments as
+                                security for credit, giving you access to funds when you need them while your
+                                investments stay invested and continue working towards your long term goals.
+                            </p>
+                            <button
+                                onclick="document.getElementById('secured-blurb').classList.toggle('line-clamp-2'); this.innerHTML = this.innerHTML.includes('Read more') ? 'Read less' : 'Read more <svg class=\'w-4 h-4 transition-transform group-hover:translate-x-1\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\'><path d=\'M5 12h14M12 5l7 7-7 7\'/></svg>'"
+                                class="md:hidden inline-flex items-center gap-2 mt-4 text-sm font-medium text-white/80 hover:text-white transition-colors group focus:outline-none">
+                                Read more
+                                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Right Side (Unsecured Credit) -->
+                        <div class="w-full md:w-1/2 md:pl-[50px] text-left flex flex-col justify-center opacity-0 transition-all duration-1000 translate-y-8 mt-12 md:mt-0"
+                            id="rightContent">
+                            <h4 class="text-3xl font-semibold text-white mb-4">Unsecured Credit</h4>
+                            <p id="unsecured-blurb"
+                                class="text-gray-50 text-lg font-light leading-relaxed line-clamp-2 md:line-clamp-none transition-all duration-300">
+                                Access multiple loan offers in one place through our integrated marketplace. With a
+                                single credit check, you can instantly view customised offers from trusted providers
+                                side by side, compare your options, and choose what works for you.
+                            </p>
+                            <button
+                                onclick="document.getElementById('unsecured-blurb').classList.toggle('line-clamp-2'); this.innerHTML = this.innerHTML.includes('Read more') ? 'Read less' : 'Read more <svg class=\'w-4 h-4 transition-transform group-hover:translate-x-1\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\'><path d=\'M5 12h14M12 5l7 7-7 7\'/></svg>'"
+                                class="md:hidden inline-flex items-center gap-2 mt-4 text-sm font-medium text-white/80 hover:text-white transition-colors group focus:outline-none">
+                                Read more
+                                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
                 </div>
-
-                <!-- Right Side (Unsecured Credit) -->
-                <div class="w-full md:w-1/2 md:pl-[50px] text-left flex flex-col justify-center opacity-0 transition-all duration-1000 translate-y-8 mt-12 md:mt-0" id="rightContent">
-                    <h4 class="text-3xl font-semibold text-white mb-4">Unsecured Credit</h4>
-                    <p id="unsecured-blurb" class="text-gray-400 text-lg font-light leading-relaxed line-clamp-2 md:line-clamp-none transition-all duration-300">
-                        Access our integrated marketplace to run a single credit check and instantly view multiple customized loan offers side-by-side from various trusted providers.
-                    </p>
-                    <button onclick="document.getElementById('unsecured-blurb').classList.toggle('line-clamp-2'); this.innerHTML = this.innerHTML.includes('Read more') ? 'Read less' : 'Read more <svg class=\'w-4 h-4 transition-transform group-hover:translate-x-1\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\'><path d=\'M5 12h14M12 5l7 7-7 7\'/></svg>'" class="md:hidden inline-flex items-center gap-2 mt-4 text-sm font-medium text-white/80 hover:text-white transition-colors group focus:outline-none">
-                        Read more
-                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </button>
-                </div>
-
             </div>
-            </div>
-        </div>
         </div>
     </section>
 
@@ -165,7 +190,7 @@
 
                         // Fade in the divider
                         const divider = document.getElementById('centerDivider');
-                        if(divider) {
+                        if (divider) {
                             setTimeout(() => {
                                 divider.style.opacity = '1';
                             }, 600);
@@ -174,7 +199,7 @@
                         // Fade in left and right content
                         const leftContent = document.getElementById('leftContent');
                         const rightContent = document.getElementById('rightContent');
-                        if(leftContent && rightContent) {
+                        if (leftContent && rightContent) {
                             setTimeout(() => {
                                 leftContent.style.transform = 'translateY(0)';
                                 leftContent.style.opacity = '1';
@@ -182,7 +207,7 @@
                                 rightContent.style.opacity = '1';
                             }, 800);
                         }
-                        
+
                         // Unobserve after animating
                         observer.unobserve(entry.target);
                     }
@@ -199,28 +224,35 @@
         .accordion-panel {
             flex: 1;
         }
+
         .accordion-panel.active {
             flex: 3;
         }
-        .accordion-desc, .accordion-icon {
+
+        .accordion-desc,
+        .accordion-icon {
             opacity: 0;
             max-height: 0;
             overflow: hidden;
             transition: opacity 0.4s ease, max-height 0.4s ease;
         }
+
         .accordion-panel.active .accordion-desc,
         .accordion-panel.active .accordion-icon {
             opacity: 1;
             max-height: 800px;
             transition-delay: 0.2s;
         }
+
         .accordion-overlay {
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%);
             transition: background 0.7s ease;
         }
+
         .accordion-panel.active .accordion-overlay {
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
         }
+
         /* Handle vertical stacking on mobile */
         @media (max-width: 768px) {
             .accordion-panel.active {
@@ -229,53 +261,79 @@
         }
     </style>
 
-    <section class="py-24 px-6 max-w-7xl mx-auto bg-white rounded-t-[3rem] shadow-[0_8px_40px_rgba(0,0,0,0.03)] z-20 relative -mt-20">
+    <section
+        class="py-24 px-6 max-w-7xl mx-auto bg-white rounded-t-[3rem] shadow-[0_8px_40px_rgba(0,0,0,0.03)] z-20 relative -mt-20">
         <div class="flex flex-col md:flex-row gap-4 h-[600px] w-full" id="creditAccordion">
-            
+
             <!-- Secured Credit Panel -->
-            <div id="secured-credit" data-flow="secured" class="accordion-panel active relative rounded-[2.5rem] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group">
-                <img src="/images/Secured Credit.avif" alt="Secured Credit Background" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 z-0">
+            <div id="secured-credit" data-flow="secured"
+                class="accordion-panel active relative rounded-[2.5rem] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group">
+                <img src="/images/Secured Credit.avif" alt="Secured Credit Background"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 z-0">
                 <div class="absolute inset-0 accordion-overlay z-10"></div>
-                
+
                 <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12 z-20 flex flex-col justify-end">
                     <h3 class="text-3xl md:text-4xl font-semibold text-white mb-4 flex flex-wrap items-center gap-3">
                         Secured Credit
-                        <div class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center accordion-icon">
-                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-white">
+                        <div
+                            class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center accordion-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24" class="text-white">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
                         </div>
                     </h3>
-                    <p id="secured-test" class="text-white/90 text-lg leading-relaxed accordion-desc line-clamp-2 md:line-clamp-none transition-all duration-300">
-                        "Secured credit let me jump on a new business idea without having to sell off my MINT portfolio. The best part? While I was using the loan, my original investments actually went up in value. If I had sold them for the cash, I would have completely missed out on that growth."
+                    <p id="secured-test"
+                        class="text-white/90 text-lg leading-relaxed accordion-desc line-clamp-2 md:line-clamp-none transition-all duration-300">
+                        "Secured credit let me jump on a new business idea without having to sell off my MINT portfolio.
+                        The best part? While I was using the loan, my original investments actually went up in value. If
+                        I had sold them for the cash, I would have completely missed out on that growth."
                     </p>
-                    <button onclick="event.stopPropagation(); document.getElementById('secured-test').classList.toggle('line-clamp-2'); this.innerHTML = this.innerHTML.includes('Read more') ? 'Read less' : 'Read more <svg class=\'w-4 h-4 transition-transform group-hover:translate-x-1\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\'><path d=\'M5 12h14M12 5l7 7-7 7\'/></svg>'" class="accordion-desc md:hidden inline-flex items-center gap-2 mt-3 text-sm font-medium text-white/80 hover:text-white transition-colors group focus:outline-none">
+                    <button
+                        onclick="event.stopPropagation(); document.getElementById('secured-test').classList.toggle('line-clamp-2'); this.innerHTML = this.innerHTML.includes('Read more') ? 'Read less' : 'Read more <svg class=\'w-4 h-4 transition-transform group-hover:translate-x-1\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\'><path d=\'M5 12h14M12 5l7 7-7 7\'/></svg>'"
+                        class="accordion-desc md:hidden inline-flex items-center gap-2 mt-3 text-sm font-medium text-white/80 hover:text-white transition-colors group focus:outline-none">
                         Read more
-                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
                     </button>
                 </div>
             </div>
 
             <!-- Unsecured Credit Panel -->
-            <div id="unsecured-credit" data-flow="unsecured" class="accordion-panel relative rounded-[2.5rem] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group">
-                <img src="/images/Unsecured Credit.avif" alt="Unsecured Credit Background" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 z-0">
+            <div id="unsecured-credit" data-flow="unsecured"
+                class="accordion-panel relative rounded-[2.5rem] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group">
+                <img src="/images/Unsecured Credit.avif" alt="Unsecured Credit Background"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 z-0">
                 <div class="absolute inset-0 accordion-overlay z-10"></div>
-                
+
                 <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12 z-20 flex flex-col justify-end">
                     <h3 class="text-3xl md:text-4xl font-semibold text-white mb-4 flex flex-wrap items-center gap-3">
                         Unsecured Credit
-                        <div class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center accordion-icon">
-                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                        <div
+                            class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center accordion-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24" class="text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                             </svg>
                         </div>
                     </h3>
-                    <p id="unsecured-test" class="text-white/90 text-lg leading-relaxed accordion-desc line-clamp-2 md:line-clamp-none transition-all duration-300">
-                        "I really didn't want to spend hours applying everywhere. One quick inquiry on MINT gave me access to multiple credit providers in literally seconds. Sorting by the lowest total cost and seeing the full fee breakdown made it ridiculously easy to find the exact fit for my budget."
+                    <p id="unsecured-test"
+                        class="text-white/90 text-lg leading-relaxed accordion-desc line-clamp-2 md:line-clamp-none transition-all duration-300">
+                        "I really didn't want to spend hours applying everywhere. One quick inquiry on MINT gave me
+                        access to multiple credit providers in literally seconds. Sorting by the lowest total cost and
+                        seeing the full fee breakdown made it ridiculously easy to find the exact fit for my budget."
                     </p>
-                    <button onclick="event.stopPropagation(); document.getElementById('unsecured-test').classList.toggle('line-clamp-2'); this.innerHTML = this.innerHTML.includes('Read more') ? 'Read less' : 'Read more <svg class=\'w-4 h-4 transition-transform group-hover:translate-x-1\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\'><path d=\'M5 12h14M12 5l7 7-7 7\'/></svg>'" class="accordion-desc md:hidden inline-flex items-center gap-2 mt-3 text-sm font-medium text-white/80 hover:text-white transition-colors group focus:outline-none">
+                    <button
+                        onclick="event.stopPropagation(); document.getElementById('unsecured-test').classList.toggle('line-clamp-2'); this.innerHTML = this.innerHTML.includes('Read more') ? 'Read less' : 'Read more <svg class=\'w-4 h-4 transition-transform group-hover:translate-x-1\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\'><path d=\'M5 12h14M12 5l7 7-7 7\'/></svg>'"
+                        class="accordion-desc md:hidden inline-flex items-center gap-2 mt-3 text-sm font-medium text-white/80 hover:text-white transition-colors group focus:outline-none">
                         Read more
-                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -373,14 +431,14 @@
             const panels = document.querySelectorAll('.accordion-panel');
             const leftStepsContainer = document.getElementById('leftStepsContainer');
             const rightStepsContainer = document.getElementById('rightStepsContainer');
-            
+
             // Phone Elements
             const phoneOfferType = document.getElementById('phoneOfferType');
             const phoneBottomLabel = document.getElementById('phoneBottomLabel');
             const phoneBottomValue = document.getElementById('phoneBottomValue');
             const phoneCard1 = document.getElementById('phoneCard1');
             const phoneCard2 = document.getElementById('phoneCard2');
-            
+
             let currentFlow = 'secured';
 
             function updatePhoneUI(stepData) {
@@ -389,12 +447,12 @@
                 phoneCard2.style.transform = 'scale(0.98)';
                 phoneCard1.style.opacity = '0.5';
                 phoneCard2.style.opacity = '0.5';
-                
+
                 setTimeout(() => {
                     phoneOfferType.innerText = stepData.phoneOfferType;
                     phoneBottomLabel.innerText = stepData.phoneBottomLabel;
                     phoneBottomValue.innerText = stepData.phoneBottomValue;
-                    
+
                     phoneCard1.style.transform = 'scale(1)';
                     phoneCard2.style.transform = 'scale(1)';
                     phoneCard1.style.opacity = '1';
@@ -406,14 +464,14 @@
                 const steps = flowData[flow];
                 leftStepsContainer.innerHTML = '';
                 rightStepsContainer.innerHTML = '';
-                
+
                 steps.forEach((step, index) => {
                     // Create step element
                     const stepEl = document.createElement('div');
                     const isActive = index === 0;
-                    
+
                     stepEl.className = `p-2 md:p-4 rounded-2xl cursor-pointer transition-all duration-300 border step-card ${isActive ? 'bg-white/10 border-white/20 shadow-xl md:scale-100 is-active' : 'bg-transparent border-transparent hover:bg-white/5 opacity-60 hover:opacity-100 md:scale-95'}`;
-                    
+
                     stepEl.innerHTML = `
                         <div class="flex items-center justify-between">
                             <div>
@@ -433,18 +491,18 @@
                         document.querySelectorAll('.step-card').forEach(el => {
                             el.className = 'p-2 md:p-4 rounded-2xl cursor-pointer transition-all duration-300 border step-card bg-transparent border-transparent hover:bg-white/5 opacity-60 hover:opacity-100 md:scale-95';
                             const desc = el.querySelector('.step-desc');
-                            if(desc) desc.className = 'step-desc overflow-hidden transition-all duration-300 max-h-0 opacity-0 md:max-h-96 md:opacity-100 md:mt-1';
+                            if (desc) desc.className = 'step-desc overflow-hidden transition-all duration-300 max-h-0 opacity-0 md:max-h-96 md:opacity-100 md:mt-1';
                             const chevron = el.querySelector('.chevron');
-                            if(chevron) chevron.style.transform = 'rotate(0deg)';
+                            if (chevron) chevron.style.transform = 'rotate(0deg)';
                         });
-                    
-                    // Activate this step
-                    stepEl.className = 'p-2 md:p-4 rounded-2xl cursor-pointer transition-all duration-300 border step-card bg-white/10 border-white/20 shadow-xl md:scale-100 is-active';
-                    const currentDesc = stepEl.querySelector('.step-desc');
-                    if(currentDesc) currentDesc.className = 'step-desc overflow-hidden transition-all duration-300 max-h-96 opacity-100 mt-1 md:max-h-96 md:opacity-100 md:mt-1';
+
+                        // Activate this step
+                        stepEl.className = 'p-2 md:p-4 rounded-2xl cursor-pointer transition-all duration-300 border step-card bg-white/10 border-white/20 shadow-xl md:scale-100 is-active';
+                        const currentDesc = stepEl.querySelector('.step-desc');
+                        if (currentDesc) currentDesc.className = 'step-desc overflow-hidden transition-all duration-300 max-h-96 opacity-100 mt-1 md:max-h-96 md:opacity-100 md:mt-1';
                         const currentChevron = stepEl.querySelector('.chevron');
-                        if(currentChevron) currentChevron.style.transform = 'rotate(180deg)';
-                        
+                        if (currentChevron) currentChevron.style.transform = 'rotate(180deg)';
+
                         // Update Phone UI
                         updatePhoneUI(step);
                     });
@@ -476,7 +534,7 @@
                         const yOffset = -100;
                         const element = document.getElementById('creditAccordion');
                         const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-                        window.scrollTo({top: y, behavior: 'smooth'});
+                        window.scrollTo({ top: y, behavior: 'smooth' });
                     }, 100);
                 } else if (hash === '#secured-credit') {
                     const securedPanel = document.querySelector('[data-flow="secured"]');
@@ -486,24 +544,24 @@
                         const yOffset = -100;
                         const element = document.getElementById('creditAccordion');
                         const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-                        window.scrollTo({top: y, behavior: 'smooth'});
+                        window.scrollTo({ top: y, behavior: 'smooth' });
                     }, 100);
                 }
             }
 
             setTimeout(handleHashChange, 100);
             window.addEventListener('hashchange', handleHashChange);
-            
+
             // Accordion click handlers
             panels.forEach(panel => {
                 panel.addEventListener('click', () => {
-                    if(panel.classList.contains('active')) return;
-                    
+                    if (panel.classList.contains('active')) return;
+
                     panels.forEach(p => p.classList.remove('active'));
                     panel.classList.add('active');
 
                     const flowType = panel.getAttribute('data-flow');
-                    if(flowType !== currentFlow) {
+                    if (flowType !== currentFlow) {
                         currentFlow = flowType;
                         // Fade out steps container, re-render, fade in
                         leftStepsContainer.style.opacity = '0';
@@ -525,15 +583,18 @@
         <h2 class="text-3xl md:text-5xl font-semibold text-center mb-6 md:mb-12 tracking-tight">How it <span
                 class="text-white/50">works?</span></h2>
 
-        <div class="max-w-7xl mx-auto px-6 relative flex flex-col md:flex-row gap-3 md:gap-6 lg:gap-10 items-start" id="howItWorksContainer">
-            
+        <div class="max-w-7xl mx-auto px-6 relative flex flex-col md:flex-row gap-3 md:gap-6 lg:gap-10 items-start"
+            id="howItWorksContainer">
+
             <!-- Left Column: Steps (Odd numbers) -->
-            <div id="leftStepsContainer" class="w-full md:w-1/3 flex flex-col gap-2 md:gap-6 relative z-20 transition-opacity duration-300 order-2 md:order-none">
+            <div id="leftStepsContainer"
+                class="w-full md:w-1/3 flex flex-col gap-2 md:gap-6 relative z-20 transition-opacity duration-300 order-2 md:order-none">
                 <!-- Steps dynamically injected here -->
             </div>
 
             <!-- Center Column: Sticky Phone -->
-            <div class="w-full md:w-1/3 md:sticky md:top-32 flex justify-center relative z-10 mb-4 md:my-0 order-1 md:order-none">
+            <div
+                class="w-full md:w-1/3 md:sticky md:top-32 flex justify-center relative z-10 mb-4 md:my-0 order-1 md:order-none">
                 <div
                     class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 bg-[var(--mint-primary-purple)] opacity-20 blur-[80px] rounded-full">
                 </div>
@@ -554,7 +615,8 @@
                         </div>
 
                         <!-- Card 1 -->
-                        <div id="phoneCard1" class="bg-white/5 rounded-[1.2rem] p-3 border border-white/10 backdrop-blur-md mb-3 transition-all duration-300">
+                        <div id="phoneCard1"
+                            class="bg-white/5 rounded-[1.2rem] p-3 border border-white/10 backdrop-blur-md mb-3 transition-all duration-300">
                             <span class="text-[10px] text-gray-400 font-medium">Offer Type</span>
                             <div class="flex items-center gap-2 mt-1">
                                 <div class="w-3 h-3 rounded-full bg-[var(--mint-primary-purple)]"></div>
@@ -563,10 +625,13 @@
                         </div>
 
                         <!-- Card 2 -->
-                        <div id="phoneCard2" class="bg-white/5 rounded-[1.2rem] p-3 border border-white/10 backdrop-blur-md flex-1 transition-all duration-300">
-                            <span id="phoneBottomLabel" class="text-xs text-gray-400 block mb-2">Live Borrowing Power</span>
+                        <div id="phoneCard2"
+                            class="bg-white/5 rounded-[1.2rem] p-3 border border-white/10 backdrop-blur-md flex-1 transition-all duration-300">
+                            <span id="phoneBottomLabel" class="text-xs text-gray-400 block mb-2">Live Borrowing
+                                Power</span>
                             <div class="w-full h-10 bg-gray-800 rounded-lg mb-2 flex items-center px-3">
-                                <span id="phoneBottomValue" class="text-gray-300 font-medium text-xs w-full">Portfolio Linked</span>
+                                <span id="phoneBottomValue" class="text-gray-300 font-medium text-xs w-full">Portfolio
+                                    Linked</span>
                                 <svg class="text-green-400 w-4 h-4 ml-2 flex-shrink-0" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -582,9 +647,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Right Column: Steps (Even numbers) -->
-            <div id="rightStepsContainer" class="w-full md:w-1/3 flex flex-col gap-2 md:gap-6 relative z-20 transition-opacity duration-300 order-3 md:order-none">
+            <div id="rightStepsContainer"
+                class="w-full md:w-1/3 flex flex-col gap-2 md:gap-6 relative z-20 transition-opacity duration-300 order-3 md:order-none">
                 <!-- Steps dynamically injected here -->
             </div>
 
@@ -635,20 +701,27 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 items-center">
                 <div class="p-12 md:p-20 relative z-10">
-                    <span class="text-sm text-white/80 font-semibold tracking-widest uppercase block mb-4">Finally, credit that makes sense.</span>
+                    <span class="text-sm text-white/80 font-semibold tracking-widest uppercase block mb-4">Finally,
+                        credit that makes sense.</span>
                     <h2 class="text-5xl md:text-6xl font-semibold text-white tracking-tight leading-tight mb-10">
                         View MINT<br>Credit Offers Today
                     </h2>
 
-                    <button class="mint-cta-btn bg-white text-[var(--mint-primary-purple)] border-none group mt-8 shadow-xl">
-                        <span class="text-sm font-semibold text-[var(--mint-primary-purple)] uppercase tracking-widest pl-2">Explore Credit</span>
-                        <div class="mint-cta-icon bg-[var(--mint-primary-purple)] text-white shadow-sm overflow-hidden relative">
-                            <svg class="transition-transform duration-300 group-hover:translate-x-8 group-hover:-translate-y-8" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2.5">
+                    <button
+                        class="mint-cta-btn bg-white text-[var(--mint-primary-purple)] border-none group mt-8 shadow-xl">
+                        <span
+                            class="text-sm font-semibold text-[var(--mint-primary-purple)] uppercase tracking-widest pl-2">Explore
+                            Credit</span>
+                        <div
+                            class="mint-cta-icon bg-[var(--mint-primary-purple)] text-white shadow-sm overflow-hidden relative">
+                            <svg class="transition-transform duration-300 group-hover:translate-x-8 group-hover:-translate-y-8"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
                                 <path d="M7 17l10-10M7 7h10v10" />
                             </svg>
-                            <svg class="absolute -translate-x-8 translate-y-8 transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0" width="20"
-                                height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <svg class="absolute -translate-x-8 translate-y-8 transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
                                 <path d="M7 17l10-10M7 7h10v10" />
                             </svg>
                         </div>
@@ -656,7 +729,8 @@
                 </div>
 
                 <div class="hidden md:flex justify-end items-end h-full relative z-10">
-                    <img src="/images/ICON%20Mock-Up.png" alt="MINT Mockup" class="w-auto max-h-[500px] object-contain object-right-bottom translate-y-4 translate-x-4" />
+                    <img src="/images/ICON%20Mock-Up.png" alt="MINT Mockup"
+                        class="w-auto max-h-[500px] object-contain object-right-bottom translate-y-4 translate-x-4" />
                 </div>
             </div>
         </div>
@@ -668,7 +742,8 @@
         <div class="max-w-7xl mx-auto px-6 md:px-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
                 <div class="space-y-6">
-                    <img src="/images/LOGO 2 WHITE MINT.png" alt="MINT Logo" loading="lazy" class="h-10 w-auto opacity-90">
+                    <img src="/images/LOGO 2 WHITE MINT.png" alt="MINT Logo" loading="lazy"
+                        class="h-10 w-auto opacity-90">
                     <p class="text-gray-400 text-sm leading-relaxed">
                         The all-in-one solution for moving your money through investing, borrowing, and transacting.
                     </p>
@@ -693,10 +768,14 @@
                 <div>
                     <h4 class="text-white font-semibold mb-6">Quick Links</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
-                        <li><a href="/" class="hover:text-[var(--mint-primary-purple)] transition-colors">Personal</a></li>
-                        <li><a href="/business" class="hover:text-[var(--mint-primary-purple)] transition-colors">Business</a></li>
-                        <li><a href="/about" class="hover:text-[var(--mint-primary-purple)] transition-colors">About Us</a></li>
-                        <li><a href="/contact" class="hover:text-[var(--mint-primary-purple)] transition-colors">Contact</a></li>
+                        <li><a href="/" class="hover:text-[var(--mint-primary-purple)] transition-colors">Personal</a>
+                        </li>
+                        <li><a href="/business"
+                                class="hover:text-[var(--mint-primary-purple)] transition-colors">Business</a></li>
+                        <li><a href="/about" class="hover:text-[var(--mint-primary-purple)] transition-colors">About
+                                Us</a></li>
+                        <li><a href="/contact"
+                                class="hover:text-[var(--mint-primary-purple)] transition-colors">Contact</a></li>
                     </ul>
                 </div>
 
@@ -704,21 +783,28 @@
                     <h4 class="text-white font-semibold mb-6">Contact</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
                         <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-[var(--mint-primary-purple)] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <svg class="w-5 h-5 text-[var(--mint-primary-purple)] shrink-0 mt-0.5" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
                             <span>3 Gwen Ln, Sandown,<br>Sandton, 2031</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-[var(--mint-primary-purple)] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            <svg class="w-5 h-5 text-[var(--mint-primary-purple)] shrink-0" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                             <a href="mailto:info@mymint.co.za" class="hover:text-white">info@mymint.co.za</a>
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-[var(--mint-primary-purple)] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            <svg class="w-5 h-5 text-[var(--mint-primary-purple)] shrink-0" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
                             <a href="tel:+27102760531" class="hover:text-white">+27 10 276 0531</a>
                         </li>
@@ -727,11 +813,15 @@
 
                 <div class="bg-gray-900/50 p-6 rounded-2xl border border-gray-800">
                     <h4 class="text-white font-semibold mb-2">Ready to start?</h4>
-                    <p class="text-gray-400 text-xs mb-6">Join a growing group of South Africans building wealth with MINT.</p>
-                    <button class="w-full bg-[var(--mint-primary-purple)] hover:bg-[#4a2fb3] text-white py-3 px-6 rounded-full text-sm font-semibold transition-all flex items-center justify-center gap-2 group">
+                    <p class="text-gray-400 text-xs mb-6">Join a growing group of South Africans building wealth with
+                        MINT.</p>
+                    <button
+                        class="w-full bg-[var(--mint-primary-purple)] hover:bg-[#4a2fb3] text-white py-3 px-6 rounded-full text-sm font-semibold transition-all flex items-center justify-center gap-2 group">
                         Go to MINT
-                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                     </button>
                 </div>
@@ -749,13 +839,21 @@
                 </div>
                 <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
                     <p>&copy; 2026 MINT. All rights reserved.</p>
-                    <div class="flex flex-wrap gap-3 sm:gap-6 items-center justify-center md:justify-end divide-x divide-gray-700">
-                        <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20Advertising%20and%20Markteing%20Standards%20Statement%20(Final)%201.pdf" class="hover:text-white transition-colors px-2">Advertising and Markteing Standards Statement</a>
-                        <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20AML%20Policy%20Statement%20(Final)%201.pdf" class="hover:text-white transition-colors px-2">AML Policy Statement</a>
-                        <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20Complaints%20Policy%20(Final)%201.pdf" class="hover:text-white transition-colors px-2">Complaints Policy</a>
-                        <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20Privacy%20Policy%20(Final).pdf" class="hover:text-white transition-colors px-2">Privacy Policy</a>
-                        <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20Risk%20Dislcousure%20and%20Management%20Policy%20(Final)%201%201.pdf" class="hover:text-white transition-colors px-2">Risk Dislcousure and Management Policy</a>
-                        <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20Website%20Terms%20(Final)%20(1)%201.pdf" class="hover:text-white transition-colors px-2">Website Terms</a>
+                    <div
+                        class="flex flex-wrap gap-3 sm:gap-6 items-center justify-center md:justify-end divide-x divide-gray-700">
+                        <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20Advertising%20and%20Markteing%20Standards%20Statement%20(Final)%201.pdf"
+                            class="hover:text-white transition-colors px-2">Advertising and Markteing Standards
+                            Statement</a>
+                        <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20AML%20Policy%20Statement%20(Final)%201.pdf"
+                            class="hover:text-white transition-colors px-2">AML Policy Statement</a>
+                        <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20Complaints%20Policy%20(Final)%201.pdf"
+                            class="hover:text-white transition-colors px-2">Complaints Policy</a>
+                        <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20Privacy%20Policy%20(Final).pdf"
+                            class="hover:text-white transition-colors px-2">Privacy Policy</a>
+                        <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20Risk%20Dislcousure%20and%20Management%20Policy%20(Final)%201%201.pdf"
+                            class="hover:text-white transition-colors px-2">Risk Dislcousure and Management Policy</a>
+                        <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20Website%20Terms%20(Final)%20(1)%201.pdf"
+                            class="hover:text-white transition-colors px-2">Website Terms</a>
                     </div>
                 </div>
             </div>
