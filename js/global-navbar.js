@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (placeholder) {
                 placeholder.innerHTML = html;
                 
-                
-                // Global scroll logic
+                // Global scroll logic — hide on scroll down, show on scroll up, dark on scroll past 100
                 let lastScroll = window.scrollY;
                 window.addEventListener('scroll', () => {
                     const currentScroll = window.scrollY;
@@ -18,6 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             header.classList.add('header-hidden');
                         } else {
                             header.classList.remove('header-hidden');
+                        }
+
+                        if (currentScroll > 100) {
+                            header.classList.add('header-dark');
+                        } else {
+                            header.classList.remove('header-dark');
                         }
                     }
                     lastScroll = currentScroll;
