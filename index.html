@@ -879,11 +879,8 @@
 
     </div>
 
-    <section id="blackSection" class="bg-black py-24 md:py-40 relative overflow-hidden z-20 min-h-[70vh] flex items-center">
-        <!-- Video: Bottom aligned, half previous size, lower z-index, no loop -->
-        <video src="/videos/Sc_09.mp4" autoplay muted playsinline class="absolute bottom-0 right-[-10%] md:right-0 z-0 w-[600px] md:w-[900px] max-w-none object-contain object-bottom pointer-events-none"></video>
-
-        <div class="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10 w-full">
+    <section id="blackSection" class="bg-black py-24 md:py-32 relative overflow-hidden z-20">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
             <div class="flex flex-col justify-center h-full relative z-30">
                 <div class="w-full max-w-xl">
@@ -906,8 +903,16 @@
                 </div>
             </div>
 
-            <!-- Empty column to preserve grid layout -->
-            <div class="hidden lg:block h-full"></div>
+            <div class="flex justify-center lg:justify-end mt-12 lg:mt-0 relative z-30">
+                <div class="relative w-full max-w-md overflow-hidden">
+                    <img src="/images/Section rocks phone.avif" alt="Phone on Rocks" loading="lazy"
+                        class="relative z-10 w-full object-contain">
+                    <img src="/images/rock.avif" alt="Rock" loading="lazy"
+                        class="absolute top-0 -right-2 w-24 md:w-32 z-20 floating-rock-1">
+                    <img src="/images/rock.avif" alt="Rock" loading="lazy"
+                        class="absolute bottom-0 -left-2 w-24 md:w-32 z-20 floating-rock-2">
+                </div>
+            </div>
 
         </div>
     </section>
