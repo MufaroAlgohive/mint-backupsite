@@ -699,11 +699,11 @@
     </style>
 </head>
 
-<body>
+<body data-nav-theme="dark">
 
     <div id="preloader" class="fixed inset-0 z-[100] flex flex-col justify-center items-center bg-[#0a0a0a]" style="display: none !important;">
         <div class="px-8 py-10 md:px-12 md:py-16 text-center">
-            <h2 class="text-4xl md:text-5xl lg:text-7xl font-semibold text-white tracking-tight leading-tight">
+            <h2 class="text-4xl md:text-5xl lg:text-7xl font-light text-white tracking-tight leading-tight">
                 A Wealth Manager <br class="hidden md:block" /> Built for Your Lifestyle.
             </h2>
             <div class="mt-8 flex justify-center">
@@ -715,7 +715,7 @@
     </div>
 
     <div id="main-header-placeholder"></div>
-    <script src="/js/global-navbar.js"></script>
+    <script src="js/global-navbar.js"></script>
 
     <div id="pinContainer">
 
@@ -918,92 +918,21 @@
 
     <section class="relative overflow-hidden bg-black min-h-screen flex flex-col justify-center items-center" id="marqueeSection">
         
-        <!-- Floating Marquee Background -->
-        <div id="marqueeImages" class="absolute inset-0 z-0 flex justify-center gap-4 sm:gap-6 lg:gap-8 w-[150%] md:w-[120%] lg:w-[110%] left-1/2 -translate-x-1/2 rotate-[-4deg] scale-[1.15] opacity-0 translate-y-32">
-            <!-- Column 1: moves up -->
-            <div class="flex flex-col animate-marquee-up will-change-transform">
-                <div class="flex flex-col gap-4 sm:gap-6 lg:gap-8 pb-4 sm:pb-6 lg:pb-8">
-                    <img src="/images/carousel%20images/item1.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item2.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item3.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item4.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                </div>
-                <!-- Duplicate for loop -->
-                <div class="flex flex-col gap-4 sm:gap-6 lg:gap-8 pb-4 sm:pb-6 lg:pb-8">
-                    <img src="/images/carousel%20images/item1.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item2.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item3.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item4.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                </div>
-            </div>
-            
-            <!-- Column 2: moves down -->
-            <div class="flex flex-col animate-marquee-down will-change-transform mt-[-20%]">
-                <div class="flex flex-col gap-4 sm:gap-6 lg:gap-8 pb-4 sm:pb-6 lg:pb-8">
-                    <img src="/images/carousel%20images/item5.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item6.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item7.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item8.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                </div>
-                <!-- Duplicate for loop -->
-                <div class="flex flex-col gap-4 sm:gap-6 lg:gap-8 pb-4 sm:pb-6 lg:pb-8">
-                    <img src="/images/carousel%20images/item5.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item6.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item7.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item8.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                </div>
-            </div>
-            
-            <!-- Column 3: moves up fast -->
-            <div class="flex flex-col animate-marquee-up-fast will-change-transform hidden md:flex">
-                <div class="flex flex-col gap-4 sm:gap-6 lg:gap-8 pb-4 sm:pb-6 lg:pb-8">
-                    <img src="/images/carousel%20images/item9.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item10.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item11.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item1.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                </div>
-                <!-- Duplicate for loop -->
-                <div class="flex flex-col gap-4 sm:gap-6 lg:gap-8 pb-4 sm:pb-6 lg:pb-8">
-                    <img src="/images/carousel%20images/item9.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item10.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item11.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item1.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                </div>
-            </div>
-
-            <!-- Column 4: moves down fast -->
-            <div class="flex flex-col animate-marquee-down-fast will-change-transform mt-[-40%] hidden lg:flex">
-                <div class="flex flex-col gap-4 sm:gap-6 lg:gap-8 pb-4 sm:pb-6 lg:pb-8">
-                    <img src="/images/carousel%20images/item2.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item5.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item8.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item10.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                </div>
-                <!-- Duplicate for loop -->
-                <div class="flex flex-col gap-4 sm:gap-6 lg:gap-8 pb-4 sm:pb-6 lg:pb-8">
-                    <img src="/images/carousel%20images/item2.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item5.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item8.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                    <img src="/images/carousel%20images/item10.png" class="w-48 sm:w-64 md:w-72 lg:w-80 rounded-2xl object-cover shadow-2xl">
-                </div>
-            </div>
-            
-            <!-- Slight overlay to darken images for text contrast -->
-            <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
-        </div>
+        <!-- Video Background -->
+        <video class="absolute inset-0 w-full h-full object-cover z-0 opacity-60" src="/videos/WealthManagerLifestyle.mp4" autoplay loop muted playsinline></video>
+        
+        <!-- Slight overlay to darken video for text contrast -->
+        <div class="absolute inset-0 bg-black/40 pointer-events-none z-0"></div>
 
         <div id="marqueeContent" class="relative z-10 text-center px-6 md:px-10 max-w-4xl w-full opacity-0 translate-y-16">
-            <!-- Separate background div for scaling -->
-            
-            
             <div class="px-8 py-10 md:px-12 md:py-16">
-                <h2 id="marqueeTitle" class="text-4xl md:text-5xl lg:text-7xl font-semibold text-white tracking-tight leading-tight">
+                <h2 id="marqueeTitle" class="text-4xl md:text-5xl lg:text-7xl font-light text-white tracking-tight leading-tight">
                     A Wealth Manager <br class="hidden md:block" /> Built for Your Lifestyle.
                 </h2>
                 <div id="marqueeBtn" class="mt-8 flex justify-center">
-                    <button onclick="checkDevice()" class="mint-cta-btn bg-[var(--mint-dark-purple)] text-white border-none group w-fit shadow-lg shadow-purple-900/20 hover:shadow-xl hover:shadow-purple-900/30 transition-all duration-300">
-                        <span class="text-sm font-semibold text-white">Get Started</span>
-                        <div class="mint-cta-icon bg-white text-[var(--mint-dark-purple)] shadow-sm">
+                    <button onclick="checkDevice()" class="mint-cta-btn group shadow-xl">
+                        <span class="text-sm font-bold text-[var(--mint-primary-purple)] uppercase tracking-widest pl-2">Get Started</span>
+                        <div class="mint-cta-icon group-hover:scale-110">
                             <svg class="transition-transform duration-300 group-hover:translate-x-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
@@ -1012,32 +941,6 @@
                 </div>
             </div>
         </div>
-
-                <style>
-            .hide-scrollbar::-webkit-scrollbar { display: none; }
-            .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-            
-            @keyframes marqueeUp {
-                0% { transform: translateY(0%); }
-                100% { transform: translateY(-50%); }
-            }
-            @keyframes marqueeDown {
-                0% { transform: translateY(-50%); }
-                100% { transform: translateY(0%); }
-            }
-            .animate-marquee-up {
-                animation: marqueeUp 30s linear infinite;
-            }
-            .animate-marquee-down {
-                animation: marqueeDown 35s linear infinite;
-            }
-            .animate-marquee-up-fast {
-                animation: marqueeUp 20s linear infinite;
-            }
-            .animate-marquee-down-fast {
-                animation: marqueeDown 25s linear infinite;
-            }
-        </style>
     </section>
 
 <!-- Anchor for nav link "Open Strategies (5 Steps)" -->
@@ -1224,11 +1127,9 @@
                         against their investments.
                     </p>
 
-                    <button onclick="window.location.href='https://app.mymint.co.za'"
-                        class="mint-cta-btn bg-[var(--mint-primary-purple)] text-white border-none group"
-                        style="width: fit-content;">
-                        <span class="text-sm font-semibold text-white">Explore Credit</span>
-                        <div class="mint-cta-icon bg-white text-[var(--mint-primary-purple)] shadow-sm">
+                    <button onclick="window.location.href='credit.html'" class="mint-cta-btn group inline-flex">
+                        <span class="text-sm font-semibold text-[var(--mint-primary-purple)]">Explore Credit</span>
+                        <div class="mint-cta-icon">
                             <svg class="transition-transform duration-300" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2.5">
                                 <path d="M7 17l10-10M7 7h10v10" />
@@ -1400,13 +1301,13 @@
                 <div>
                     <h4 class="text-white font-semibold mb-6">Quick Links</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
-                        <li><a href="index.html"
+                        <li><a href="/"
                                 class="hover:text-[var(--mint-primary-purple)] transition-colors">Personal</a></li>
-                        <li><a href="business.html"
+                        <li><a href="/business"
                                 class="hover:text-[var(--mint-primary-purple)] transition-colors">Business</a></li>
-                        <li><a href="about.html" class="hover:text-[var(--mint-primary-purple)] transition-colors">About
+                        <li><a href="/about" class="hover:text-[var(--mint-primary-purple)] transition-colors">About
                                 Us</a></li>
-                        <li><a href="contact.html"
+                        <li><a href="/contact"
                                 class="hover:text-[var(--mint-primary-purple)] transition-colors">Contact</a></li>
                     </ul>
                 </div>
@@ -1558,20 +1459,17 @@
         window.addEventListener('scroll', () => {
             const currentScroll = window.scrollY;
             const header = document.getElementById('main-header');
-
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                header.classList.add('header-hidden');
-            } else {
-                header.classList.remove('header-hidden');
+            if (header) {
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    header.classList.add('header-hidden');
+                } else {
+                    header.classList.remove('header-hidden');
+                }
             }
             lastScroll = currentScroll;
         });
 
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        if (btn && menu) {
-            btn.addEventListener('click', () => { menu.classList.toggle('hidden'); menu.classList.toggle('flex'); });
-        }
+        // mobile menu logic moved to global-navbar.js
 
 
         gsap.registerPlugin(ScrollTrigger);
@@ -1627,38 +1525,36 @@
 
 
         tl.to("#main-header", {
-            onStart: () => document.getElementById('main-header').classList.add('header-hero-dark-text'),
-            onReverseComplete: () => document.getElementById('main-header').classList.remove('header-hero-dark-text'),
+            onStart: () => { const h = document.getElementById('main-header'); if(h) h.classList.add('header-hero-dark-text'); },
+            onReverseComplete: () => { const h = document.getElementById('main-header'); if(h) h.classList.remove('header-hero-dark-text'); },
             duration: 0.1
         }, "reveal+=0.8");
 
-
-        const mainHeader = document.getElementById('main-header');
 
         ScrollTrigger.create({
             trigger: "#blackSection",
             start: "top 80",
             end: "bottom 80",
             onEnter: () => {
-                mainHeader.classList.remove('header-dark');
-                mainHeader.classList.remove('header-hero-dark-text');
+                const mh = document.getElementById('main-header');
+                if (mh) { mh.classList.remove('header-dark'); mh.classList.remove('header-hero-dark-text'); }
             },
-            onLeave: () => mainHeader.classList.add('header-dark'),
+            onLeave: () => { const mh = document.getElementById('main-header'); if(mh) mh.classList.add('header-dark'); },
             onEnterBack: () => {
-                mainHeader.classList.remove('header-dark');
-                mainHeader.classList.remove('header-hero-dark-text');
+                const mh = document.getElementById('main-header');
+                if (mh) { mh.classList.remove('header-dark'); mh.classList.remove('header-hero-dark-text'); }
             },
-            onLeaveBack: () => mainHeader.classList.add('header-hero-dark-text')
+            onLeaveBack: () => { const mh = document.getElementById('main-header'); if(mh) mh.classList.add('header-hero-dark-text'); }
         });
 
         ScrollTrigger.create({
             trigger: "#main-footer",
             start: "top 80",
             onEnter: () => {
-                mainHeader.classList.remove('header-dark');
-                mainHeader.classList.remove('header-hero-dark-text');
+                const mh = document.getElementById('main-header');
+                if (mh) { mh.classList.remove('header-dark'); mh.classList.remove('header-hero-dark-text'); }
             },
-            onLeaveBack: () => mainHeader.classList.add('header-dark')
+            onLeaveBack: () => { const mh = document.getElementById('main-header'); if(mh) mh.classList.add('header-dark'); }
         });
 
 
@@ -1675,7 +1571,7 @@
             trigger: "#borrowSection",
             start: "top 80%",
             onEnter: () => {
-                mainHeader.classList.add('header-dark');
+                document.getElementById('main-header')?.classList.add('header-dark');
                 const media = document.getElementById('borrowVideo');
                 if (media) {
                     media.classList.add('reveal');
@@ -1684,9 +1580,9 @@
                     }
                 }
             },
-            onEnterBack: () => mainHeader.classList.add('header-dark'),
-            onLeave: () => mainHeader.classList.remove('header-dark'),
-            onLeaveBack: () => mainHeader.classList.remove('header-dark')
+            onEnterBack: () => document.getElementById('main-header')?.classList.add('header-dark'),
+            onLeave: () => document.getElementById('main-header')?.classList.remove('header-dark'),
+            onLeaveBack: () => document.getElementById('main-header')?.classList.remove('header-dark')
         });
 
         ScrollTrigger.create({
@@ -1694,18 +1590,18 @@
             start: "top 80",
             end: "bottom 80",
             onEnter: () => {
-                mainHeader.classList.remove('header-dark');
-                mainHeader.classList.remove('header-hero-dark-text');
+                document.getElementById('main-header')?.classList.remove('header-dark');
+                document.getElementById('main-header')?.classList.remove('header-hero-dark-text');
             },
             onEnterBack: () => {
-                mainHeader.classList.remove('header-dark');
-                mainHeader.classList.remove('header-hero-dark-text');
+                document.getElementById('main-header')?.classList.remove('header-dark');
+                document.getElementById('main-header')?.classList.remove('header-hero-dark-text');
             },
             onLeave: () => {
-                mainHeader.classList.add('header-dark');
+                document.getElementById('main-header')?.classList.add('header-dark');
             },
             onLeaveBack: () => {
-                mainHeader.classList.add('header-dark');
+                document.getElementById('main-header')?.classList.add('header-dark');
             }
         });
 
@@ -1719,15 +1615,15 @@
                 pin: true,
                 scrub: 1,
                 onEnter: () => {
-                    mainHeader.classList.remove('header-dark');
-                    mainHeader.classList.remove('header-hero-dark-text');
+                    document.getElementById('main-header')?.classList.remove('header-dark');
+                    document.getElementById('main-header')?.classList.remove('header-hero-dark-text');
                 },
-                onLeave: () => mainHeader.classList.add('header-dark'),
+                onLeave: () => document.getElementById('main-header')?.classList.add('header-dark'),
                 onEnterBack: () => {
-                    mainHeader.classList.remove('header-dark');
-                    mainHeader.classList.remove('header-hero-dark-text');
+                    document.getElementById('main-header')?.classList.remove('header-dark');
+                    document.getElementById('main-header')?.classList.remove('header-hero-dark-text');
                 },
-                onLeaveBack: () => mainHeader.classList.add('header-dark')
+                onLeaveBack: () => document.getElementById('main-header')?.classList.add('header-dark')
             }
         });
 
@@ -1809,8 +1705,40 @@
         </button>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            function handleMintGiftingNav(e) {
+                const isClick = e && e.type === 'click';
+                const target = isClick ? e.target.closest('a[href="#mintGifting"]') : true;
+                if (isClick && !target) return;
+                
+                if (isClick) e.preventDefault();
+                
+                const stepsSection = document.getElementById('stepsSection');
+                const container = document.getElementById('investHorizontalContainer');
+                
+                if (stepsSection && container) {
+                    stepsSection.scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => {
+                        const panel2 = container.children[1];
+                        if (panel2) {
+                            container.scrollTo({ left: panel2.offsetLeft, behavior: 'smooth' });
+                        } else {
+                            container.scrollTo({ left: window.innerWidth, behavior: 'smooth' });
+                        }
+                    }, 300);
+                } else if (isClick && window.location.pathname !== '/' && !window.location.pathname.endsWith('index.html')) {
+                    window.location.href = 'index.html#mintGifting';
+                }
+            }
 
+            document.body.addEventListener('click', handleMintGiftingNav);
 
+            if (window.location.hash === '#mintGifting') {
+                setTimeout(() => handleMintGiftingNav(null), 300);
+            }
+        });
+    </script>
 </body>
 
 </html>
