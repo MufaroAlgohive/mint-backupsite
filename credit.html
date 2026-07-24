@@ -128,25 +128,25 @@
                 <!-- Left Side (Secured Credit) -->
                 <div class="w-full md:w-1/2 md:pr-[50px] text-left md:text-right flex flex-col justify-center opacity-0 transition-all duration-1000 translate-y-8" id="leftContent">
                     <h4 class="text-3xl font-semibold text-white mb-4">Secured Credit</h4>
-                    <p class="text-gray-400 text-lg font-light leading-relaxed">
+                    <p id="secured-blurb" class="text-gray-400 text-lg font-light leading-relaxed line-clamp-2 md:line-clamp-none transition-all duration-300">
                         Borrow against your existing investments as collateral. Gain instant liquidity without needing to sell your assets, maintaining your long-term growth while meeting your short-term needs.
                     </p>
-                    <a href="#secured-credit" class="md:hidden inline-flex items-center gap-2 mt-4 text-sm font-medium text-white/80 hover:text-white transition-colors group">
+                    <button onclick="document.getElementById('secured-blurb').classList.toggle('line-clamp-2'); this.innerHTML = this.innerHTML.includes('Read more') ? 'Read less' : 'Read more <svg class=\'w-4 h-4 transition-transform group-hover:translate-x-1\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\'><path d=\'M5 12h14M12 5l7 7-7 7\'/></svg>'" class="md:hidden inline-flex items-center gap-2 mt-4 text-sm font-medium text-white/80 hover:text-white transition-colors group focus:outline-none">
                         Read more
                         <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Right Side (Unsecured Credit) -->
                 <div class="w-full md:w-1/2 md:pl-[50px] text-left flex flex-col justify-center opacity-0 transition-all duration-1000 translate-y-8 mt-12 md:mt-0" id="rightContent">
                     <h4 class="text-3xl font-semibold text-white mb-4">Unsecured Credit</h4>
-                    <p class="text-gray-400 text-lg font-light leading-relaxed">
+                    <p id="unsecured-blurb" class="text-gray-400 text-lg font-light leading-relaxed line-clamp-2 md:line-clamp-none transition-all duration-300">
                         Access our integrated marketplace to run a single credit check and instantly view multiple customized loan offers side-by-side from various trusted providers.
                     </p>
-                    <a href="#unsecured-credit" class="md:hidden inline-flex items-center gap-2 mt-4 text-sm font-medium text-white/80 hover:text-white transition-colors group">
+                    <button onclick="document.getElementById('unsecured-blurb').classList.toggle('line-clamp-2'); this.innerHTML = this.innerHTML.includes('Read more') ? 'Read less' : 'Read more <svg class=\'w-4 h-4 transition-transform group-hover:translate-x-1\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\'><path d=\'M5 12h14M12 5l7 7-7 7\'/></svg>'" class="md:hidden inline-flex items-center gap-2 mt-4 text-sm font-medium text-white/80 hover:text-white transition-colors group focus:outline-none">
                         Read more
                         <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
+                    </button>
                 </div>
 
             </div>
@@ -246,9 +246,13 @@
                             </svg>
                         </div>
                     </h3>
-                    <p class="text-white/90 text-lg leading-relaxed accordion-desc">
+                    <p id="secured-test" class="text-white/90 text-lg leading-relaxed accordion-desc line-clamp-2 md:line-clamp-none transition-all duration-300">
                         "Secured credit let me jump on a new business idea without having to sell off my MINT portfolio. The best part? While I was using the loan, my original investments actually went up in value. If I had sold them for the cash, I would have completely missed out on that growth."
                     </p>
+                    <button onclick="event.stopPropagation(); document.getElementById('secured-test').classList.toggle('line-clamp-2'); this.innerHTML = this.innerHTML.includes('Read more') ? 'Read less' : 'Read more <svg class=\'w-4 h-4 transition-transform group-hover:translate-x-1\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\'><path d=\'M5 12h14M12 5l7 7-7 7\'/></svg>'" class="md:hidden inline-flex items-center gap-2 mt-3 text-sm font-medium text-white/80 hover:text-white transition-colors group focus:outline-none">
+                        Read more
+                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
                 </div>
             </div>
 
@@ -266,9 +270,13 @@
                             </svg>
                         </div>
                     </h3>
-                    <p class="text-white/90 text-lg leading-relaxed accordion-desc">
+                    <p id="unsecured-test" class="text-white/90 text-lg leading-relaxed accordion-desc line-clamp-2 md:line-clamp-none transition-all duration-300">
                         "I really didn't want to spend hours applying everywhere. One quick inquiry on MINT gave me access to multiple credit providers in literally seconds. Sorting by the lowest total cost and seeing the full fee breakdown made it ridiculously easy to find the exact fit for my budget."
                     </p>
+                    <button onclick="event.stopPropagation(); document.getElementById('unsecured-test').classList.toggle('line-clamp-2'); this.innerHTML = this.innerHTML.includes('Read more') ? 'Read less' : 'Read more <svg class=\'w-4 h-4 transition-transform group-hover:translate-x-1\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\'><path d=\'M5 12h14M12 5l7 7-7 7\'/></svg>'" class="md:hidden inline-flex items-center gap-2 mt-3 text-sm font-medium text-white/80 hover:text-white transition-colors group focus:outline-none">
+                        Read more
+                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
                 </div>
             </div>
 
