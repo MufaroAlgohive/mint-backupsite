@@ -700,21 +700,61 @@
 </head>
 
 <body data-nav-theme="dark">
-
-    <div id="preloader" class="fixed inset-0 z-[100] flex flex-col justify-center items-center bg-[#0a0a0a]"
-        style="display: none !important;">
-        <div class="px-8 py-10 md:px-12 md:py-16 text-center">
-            <h2 class="text-4xl md:text-5xl lg:text-7xl font-light text-white tracking-tight leading-tight">
-                A Wealth Manager <br class="hidden md:block" /> Built for Your Lifestyle.
-            </h2>
-            <div class="mt-8 flex justify-center">
-                <div
-                    class="mint-cta-btn bg-[var(--mint-dark-purple)] text-white border-none group w-fit shadow-lg shadow-purple-900/20 px-8 py-4 rounded-full">
-                    <span class="text-sm font-semibold text-white tracking-widest uppercase">Loading...</span>
-                </div>
-            </div>
-        </div>
+    <style>
+        #video-preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+    <div id="video-preloader">
+        <video id="preloader-video" muted playsinline class="w-64 md:w-96">
+            <source src="/videos/MINT LogoReveal.mp4" type="video/mp4">
+        </video>
     </div>
+    <script>
+        window.preloaderFinished = false;
+        const preloader = document.getElementById('video-preloader');
+        const video = document.getElementById('preloader-video');
+
+        function hidePreloader() {
+            if (!preloader) return;
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                window.preloaderFinished = true;
+                window.dispatchEvent(new Event('preloaderComplete'));
+                
+                if (typeof startAutoplay === 'function' && !window.slotStarted && window.scrollY < 50) {
+                    startAutoplay();
+                    window.slotStarted = true;
+                }
+            }, 500);
+        }
+
+        if (document.readyState === 'complete') {
+            if (preloader) preloader.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            window.preloaderFinished = true;
+            window.dispatchEvent(new Event('preloaderComplete'));
+            if (typeof startAutoplay === 'function' && !window.slotStarted && window.scrollY < 50) {
+                startAutoplay();
+                window.slotStarted = true;
+            }
+        } else {
+            document.body.style.overflow = "hidden";
+            if (video) video.play();
+            window.addEventListener('load', hidePreloader);
+        }
+    </script>
+
+
 
     <div id="main-header-placeholder"></div>
     <script src="/js/global-navbar.js"></script>
@@ -731,9 +771,9 @@
                     </h1>
 
                     <p class="text-lg md:text-xl text-gray-50 mb-10 font-light text-left">
-                        For as little as R200, use MINT to invest in your future, grow your wealth through
-                        professionally managed portfolios, access credit when you need it, and look after your family,
-                        all in one platform.
+                        Invest with MINT from as little as R200. When life happens, borrow against your portfolio
+                        instead of selling it, with no damage to your credit score. Insure, spend and grow, all in one
+                        regulated platform.
                     </p>
 
                     <button onclick="checkDevice()" class="mint-cta-btn group inline-flex mb-8">
@@ -752,24 +792,39 @@
                     </button>
 
                 </div>
-                
+
                 <!-- Pills Row Container -->
                 <div class="relative w-full mt-16 md:mt-24">
                     <!-- Flashing arrow indicator for mobile -->
-                    <div id="hero-scroll-indicator" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none md:hidden bg-gradient-to-l from-black/80 to-transparent w-16 h-full flex items-center justify-end pr-1 transition-all duration-300">
-                        <svg class="w-5 h-5 text-white animate-pulse transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                    <div id="hero-scroll-indicator"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none md:hidden bg-gradient-to-l from-black/80 to-transparent w-16 h-full flex items-center justify-end pr-1 transition-all duration-300">
+                        <svg class="w-5 h-5 text-white animate-pulse transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M13 5l7 7-7 7M5 5l7 7-7 7" />
                         </svg>
                     </div>
                     <!-- Pills Row spread evenly across the hero width -->
-                    <div id="hero-pills-container" onscroll="handlePillsScroll(this)" class="w-full flex flex-nowrap md:flex-wrap justify-start lg:justify-between items-center gap-3 overflow-x-auto md:overflow-visible [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] px-6 md:px-0">
-                    <span class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">MINT Baskets</span>
-                    <span class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Gifting</span>
-                    <span class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Child Account</span>
-                    <span class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Family Dashboard</span>
-                    <span class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Market Insights</span>
-                    <span class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Goals</span>
-                    <span class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Credit</span>
+                    <div id="hero-pills-container" onscroll="handlePillsScroll(this)"
+                        class="w-full flex flex-nowrap md:flex-wrap justify-start lg:justify-between items-center gap-3 overflow-x-auto md:overflow-visible [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] px-6 md:px-0">
+                        <span
+                            class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">MINT
+                            Baskets</span>
+                        <span
+                            class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Gifting</span>
+                        <span
+                            class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Child
+                            Account</span>
+                        <span
+                            class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Family
+                            Dashboard</span>
+                        <span
+                            class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Market
+                            Insights</span>
+                        <span
+                            class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Goals</span>
+                        <span
+                            class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Credit</span>
                     </div>
                 </div>
                 <script>
@@ -777,7 +832,7 @@
                         const indicator = document.getElementById('hero-scroll-indicator');
                         if (!indicator) return;
                         const svg = indicator.querySelector('svg');
-                        
+
                         // Check if scrolled to the end (allow 5px margin for rounding)
                         if (Math.ceil(el.scrollLeft) >= el.scrollWidth - el.clientWidth - 5) {
                             // Reached end, point left
@@ -926,7 +981,7 @@
                     <!-- GIF -->
                     <div class="flex flex-col justify-center items-center h-full w-full">
                         <div
-                            class="relative inline-flex flex-col items-center justify-center w-full sm:max-w-xs md:max-w-sm">
+                            class="relative inline-flex flex-col items-center justify-center w-full sm:max-w-[672px] md:max-w-[800px]">
                             <!-- Top Left: Profile Icon -->
                             <div
                                 class="absolute top-4 left-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
@@ -983,7 +1038,7 @@
                     <!-- GIF with Icons -->
                     <div class="flex flex-col justify-center items-center h-full w-full">
                         <div
-                            class="relative inline-flex flex-col items-center justify-center w-full sm:max-w-xs md:max-w-sm">
+                            class="relative inline-flex flex-col items-center justify-center w-full sm:max-w-[672px] md:max-w-[800px]">
                             <!-- Top Left: Profile Icon -->
                             <div
                                 class="absolute top-4 left-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
@@ -1250,59 +1305,32 @@
             </div>
 
             <div
-                class="w-full rounded-[2rem] overflow-hidden relative shadow-sm aspect-[4/5] md:aspect-[12/5] group cursor-pointer hover:-translate-y-2 transition-transform duration-500 z-20">
-                <div class="absolute inset-0 z-10 pointer-events-none transition-colors duration-500 group-hover:bg-black/10"
-                    style="background-color: rgba(0,0,0,0.17);"></div>
-                <img src="/images/Borrow Image.png" alt="Borrow Portfolio" loading="lazy"
-                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 relative z-0">
+                class="w-full bg-[var(--mint-primary-purple)] rounded-[2rem] overflow-hidden relative shadow-sm aspect-[4/5] md:aspect-[12/5] group cursor-pointer hover:-translate-y-2 transition-transform duration-500 z-20">
 
-                <div
-                    class="absolute left-6 md:left-10 top-1/2 -translate-y-[140px] md:-translate-y-[220px] z-30 pointer-events-none select-none">
-                    <div class="flex items-center gap-4">
-                        <div class="h-[1px] w-6 md:w-8 bg-white/20"></div>
-                        <span class="text-[8px] md:text-[11px] text-white/40 uppercase tracking-[0.4em] font-light">
-                            Your money working for you
-                        </span>
-                    </div>
-                </div>
+                <div class="absolute inset-0 md:w-1/2 p-8 md:p-16 lg:p-20 z-10 flex flex-col justify-start md:justify-center pointer-events-auto">
 
-                <div class="absolute left-6 md:left-10 top-1/2 -translate-y-1/2 z-30 pointer-events-none select-none">
-                    <div
-                        class="bg-white/10 backdrop-blur-md border border-white/40 rounded-xl md:rounded-2xl p-4 md:p-6 shadow-xl flex flex-col gap-3 md:gap-4 w-[220px] sm:w-[260px] md:w-[320px]">
 
-                        <div class="flex items-center justify-between gap-2">
-                            <div class="flex items-center gap-2">
-                                <div class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></div>
-                                <span
-                                    class="text-[8px] md:text-[10px] text-white/70 uppercase tracking-widest font-bold">Instant
-                                    Liquidity</span>
-                            </div>
-                            <div class="p-1 rounded-full bg-white/10">
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" class="text-white/80 md:w-3.5 md:h-3.5">
-                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    <div class="flex h-full items-center">
+                        <button onclick="window.location.href='credit.html'"
+                            class="bg-white rounded-full flex items-center gap-4 pl-6 pr-2 py-2 shadow-xl hover:scale-105 transition-transform duration-300 group">
+                            <span
+                                class="text-[10px] md:text-xs font-bold text-[var(--mint-primary-purple)] uppercase tracking-[0.2em]">Explore Credit</span>
+                            <div
+                                class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[var(--mint-primary-purple)] text-white flex items-center justify-center">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                                    <path d="M7 17l10-10M7 7h10v10" />
                                 </svg>
                             </div>
-                        </div>
-
-                        <div class="flex flex-col">
-                            <span class="text-2xl md:text-5xl font-light text-white tracking-tight">R 450,000</span>
-                            <span class="text-[10px] md:text-base text-white/80 font-light mt-0.5">Available
-                                Credit</span>
-                        </div>
-
-                        <div class="flex flex-col gap-2 md:gap-3 pt-1">
-                            <div class="flex justify-between items-center">
-                                <span class="text-[8px] md:text-[10px] text-white/60 uppercase tracking-wider">MINT
-                                    Score 93%</span>
-                                <span class="text-[8px] md:text-[10px] text-white font-medium">High</span>
-                            </div>
-                            <div class="w-full h-0.5 md:h-1 bg-white/20 rounded-full overflow-hidden">
-                                <div class="bg-emerald-400 h-full w-3/4"></div>
-                            </div>
-                        </div>
+                        </button>
                     </div>
                 </div>
+
+                <div class="absolute inset-0 md:left-auto md:right-0 top-0 w-full md:w-1/2 h-full z-0 flex items-end justify-center overflow-hidden pointer-events-none">
+                    <img src="/images/PeopleCredit.png" alt="People Credit" loading="lazy"
+                        class="w-2/3 md:w-full h-full object-contain object-bottom transform group-hover:scale-105 transition-transform duration-700">
+                </div>
+
+
             </div>
         </div>
     </section>
@@ -1547,7 +1575,6 @@
 
     <script>
         // document.body.style.overflow = "hidden";
-        window.preloaderFinished = true; // Preloader disabled
 
         (() => {
             document.body.style.overflow = "auto";

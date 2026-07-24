@@ -173,34 +173,51 @@
     </style>
 </head>
 <body class="contact-grid-bg" data-nav-theme="light">
-
-    <div id="preloader">
-        <img src="https://static.wixstatic.com/media/f82622_7f62923a65f94af5b36b7958980b9ebc~mv2.png" alt="MINT Icon" class="brand-logo-loader">
-        
-        <div class="loader-viz">
-            <div class="brackets"></div>
-            <div class="slot-container">
-                <div class="slot-column">
-                    <div class="segment"><div class="icon-part" style="height: 25%;"></div></div>
-                    <div class="segment active"><div class="icon-part" style="height: 90%;"></div></div>
-                    <div class="segment"><div class="icon-part" style="height: 45%;"></div></div>
-                </div>
-                <div class="slot-column column-2">
-                    <div class="segment"><div class="icon-part" style="height: 55%;"></div></div>
-                    <div class="segment active"><div class="icon-part" style="height: 40%; border-radius: 4px 4px 15px 15px; margin-top: -15px;"></div></div>
-                    <div class="segment"><div class="icon-part" style="height: 25%;"></div></div>
-                </div>
-                <div class="slot-column column-3">
-                    <div class="segment"><div class="icon-part" style="height: 40%;"></div></div>
-                    <div class="segment active"><div class="icon-part" style="height: 90%;"></div></div>
-                    <div class="segment"><div class="icon-part" style="height: 25%;"></div></div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="brand-name-loader">MINT</div>
-        <div class="status-line">Money in Transit</div>
+    <style>
+        #video-preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+    <div id="video-preloader">
+        <video id="preloader-video" muted playsinline class="w-64 md:w-96">
+            <source src="/videos/MINT LogoReveal.mp4" type="video/mp4">
+        </video>
     </div>
+    <script>
+        window.preloaderFinished = false;
+        const preloader = document.getElementById('video-preloader');
+        const video = document.getElementById('preloader-video');
+
+        function hidePreloader() {
+            if (!preloader) return;
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                window.preloaderFinished = true;
+                window.dispatchEvent(new Event('preloaderComplete'));
+            }, 500);
+        }
+
+        if (document.readyState === 'complete') {
+            if (preloader) preloader.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            window.preloaderFinished = true;
+            window.dispatchEvent(new Event('preloaderComplete'));
+        } else {
+            document.body.style.overflow = "hidden";
+            if (video) video.play();
+            window.addEventListener('load', hidePreloader);
+        }
+    </script>
+
     
     <div id="main-header-placeholder"></div>
     <script src="/js/global-navbar.js"></script>
@@ -404,31 +421,7 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        document.body.style.overflow = "hidden"; // Lock scroll immediately
 
-        window.addEventListener('load', () => {
-            const preloaderTl = gsap.timeline();
-        
-            preloaderTl.to(".logo-loader", { 
-                opacity: 1, 
-                duration: 0.8, 
-                ease: "power2.out" 
-            })
-            .to("#preloader-bar", { 
-                width: "100%", 
-                duration: 0.6, 
-                ease: "expo.inOut" 
-            }, "-=0.4")
-            .to("#preloader", {
-                opacity: 0,
-                display: "none",
-                duration: 0.8,
-                ease: "power4.inOut",
-                onComplete: () => {
-                    document.body.style.overflow = "auto"; 
-                }
-            });
-        });
 
         // Header Transformation Logic
         let lastScroll = window.scrollY;
