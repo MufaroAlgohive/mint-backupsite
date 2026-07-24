@@ -99,6 +99,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = `index.html?invest-panel=${panelIndex}#investSection`;
             }
         }
+
+        // ── Asset tab navigation (data-asset-tab) ──────────────────────────────
+        const assetTabLink = e.target.closest('[data-asset-tab]');
+        if (assetTabLink) {
+            const tabName = assetTabLink.dataset.assetTab;
+            const isOnIndex = window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
+
+            if (isOnIndex) {
+                e.preventDefault();
+                const section = document.getElementById('assetDeploymentSection');
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => {
+                        if (typeof switchTab === 'function') switchTab(tabName);
+                    }, 400);
+                }
+            } else {
+                e.preventDefault();
+                window.location.href = `index.html?asset-tab=${tabName}#assetDeploymentSection`;
+            }
+        }
     });
 
     // ── On index.html: handle ?invest-panel=N query param on load ──────────────
@@ -106,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const panelParam = params.get('invest-panel');
     if (panelParam !== null) {
         const panelIndex = parseInt(panelParam, 10);
-        // Wait for GSAP and layout to settle before scrolling
         setTimeout(() => {
             const section = document.getElementById('investSection');
             const container = document.getElementById('investHorizontalContainer');
@@ -114,6 +134,20 @@ document.addEventListener('DOMContentLoaded', () => {
             if (container && container.children[panelIndex]) {
                 setTimeout(() => {
                     container.scrollTo({ left: container.children[panelIndex].offsetLeft, behavior: 'smooth' });
+                }, 500);
+            }
+        }, 800);
+    }
+
+    // ── On index.html: handle ?asset-tab=name query param on load ──────────────
+    const assetTabParam = params.get('asset-tab');
+    if (assetTabParam) {
+        setTimeout(() => {
+            const section = document.getElementById('assetDeploymentSection');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => {
+                    if (typeof switchTab === 'function') switchTab(assetTabParam);
                 }, 500);
             }
         }, 800);
