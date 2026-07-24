@@ -6,29 +6,50 @@ document.addEventListener('DOMContentLoaded', () => {
             const placeholder = document.getElementById('main-header-placeholder');
             if (placeholder) {
                 placeholder.innerHTML = html;
-                
-                // Global scroll logic — hide on scroll down, show on scroll up, dark on scroll past 100
+
+                // ── Colour switching logic ──────────────────────────────────────
+                // Pages declare their hero theme via data-nav-theme on <body>:
+                //   "dark"  → hero bg is dark/image → navbar starts with white text
+                //   "light" → hero bg is white/light → navbar starts with dark text immediately
+                const theme = document.body.dataset.navTheme || 'dark';
+                const header = () => document.getElementById('main-header');
+
+                if (theme === 'light') {
+                    // On light-bg pages: start header-dark immediately (black text)
+                    const h = header();
+                    if (h) h.classList.add('header-dark');
+                }
+
                 let lastScroll = window.scrollY;
                 window.addEventListener('scroll', () => {
                     const currentScroll = window.scrollY;
-                    const header = document.getElementById('main-header');
-                    if (header) {
-                        if (currentScroll > lastScroll && currentScroll > 100) {
-                            header.classList.add('header-hidden');
-                        } else {
-                            header.classList.remove('header-hidden');
-                        }
+                    const h = header();
+                    if (!h) return;
 
-                        if (currentScroll > 100) {
-                            header.classList.add('header-dark');
+                    // Hide/show on scroll direction
+                    if (currentScroll > lastScroll && currentScroll > 100) {
+                        h.classList.add('header-hidden');
+                    } else {
+                        h.classList.remove('header-hidden');
+                    }
+
+                    // Dark (white bg, black text) vs transparent (dark bg, white text)
+                    if (theme === 'light') {
+                        // Always keep dark on light-bg pages
+                        h.classList.add('header-dark');
+                    } else {
+                        // Dark pages: switch to white bg after scrolling past hero
+                        if (currentScroll > 80) {
+                            h.classList.add('header-dark');
                         } else {
-                            header.classList.remove('header-dark');
+                            h.classList.remove('header-dark');
                         }
                     }
+
                     lastScroll = currentScroll;
                 });
 
-                // Re-evaluate script tags from the injected HTML so functions are defined
+                // ── Re-evaluate <script> tags from injected HTML ────────────────
                 const scripts = placeholder.querySelectorAll('script');
                 scripts.forEach(oldScript => {
                     const newScript = document.createElement('script');
@@ -37,12 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-        
-    // Handle mobile menu clicks using event delegation
+
+    // ── Mobile menu via event delegation ───────────────────────────────────────
     document.addEventListener('click', (e) => {
         const btn = e.target.closest('#mobile-menu-btn');
         const closeBtn = e.target.closest('#mobile-menu-close');
-        
         const menu = document.getElementById('mobile-menu');
         if (menu) {
             if (btn) {
@@ -53,5 +73,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 menu.classList.remove('flex');
             }
         }
+
+        // ── Invest carousel panel navigation (data-invest-panel) ───────────────
+        const investLink = e.target.closest('[data-invest-panel]');
+        if (investLink) {
+            const panelIndex = parseInt(investLink.dataset.investPanel, 10);
+            const isOnIndex = window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
+
+            if (isOnIndex) {
+                // Already on index — scroll to section then to panel
+                e.preventDefault();
+                const section = document.getElementById('investSection');
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => {
+                        const container = document.getElementById('investHorizontalContainer');
+                        if (container && container.children[panelIndex]) {
+                            container.scrollTo({ left: container.children[panelIndex].offsetLeft, behavior: 'smooth' });
+                        }
+                    }, 400);
+                }
+            } else {
+                // Navigate to index with a query param so index.html can pick it up
+                e.preventDefault();
+                window.location.href = `index.html?invest-panel=${panelIndex}#investSection`;
+            }
+        }
     });
+
+    // ── On index.html: handle ?invest-panel=N query param on load ──────────────
+    const params = new URLSearchParams(window.location.search);
+    const panelParam = params.get('invest-panel');
+    if (panelParam !== null) {
+        const panelIndex = parseInt(panelParam, 10);
+        // Wait for GSAP and layout to settle before scrolling
+        setTimeout(() => {
+            const section = document.getElementById('investSection');
+            const container = document.getElementById('investHorizontalContainer');
+            if (section) section.scrollIntoView({ behavior: 'smooth' });
+            if (container && container.children[panelIndex]) {
+                setTimeout(() => {
+                    container.scrollTo({ left: container.children[panelIndex].offsetLeft, behavior: 'smooth' });
+                }, 500);
+            }
+        }, 800);
+    }
 });
