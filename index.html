@@ -731,9 +731,9 @@
                     </h1>
 
                     <p class="text-lg md:text-xl text-gray-50 mb-10 font-light text-left">
-                        For as little as R200, use MINT to invest in your future, grow your wealth through
-                        professionally managed portfolios, access credit when you need it, and look after your family,
-                        all in one platform.
+                        Invest with MINT from as little as R200. When life happens, borrow against your portfolio
+                        instead of selling it, with no damage to your credit score. Insure, spend and grow, all in one
+                        regulated platform.
                     </p>
 
                     <button onclick="checkDevice()" class="mint-cta-btn group inline-flex mb-8">
@@ -752,24 +752,39 @@
                     </button>
 
                 </div>
-                
+
                 <!-- Pills Row Container -->
                 <div class="relative w-full mt-16 md:mt-24">
                     <!-- Flashing arrow indicator for mobile -->
-                    <div id="hero-scroll-indicator" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none md:hidden bg-gradient-to-l from-black/80 to-transparent w-16 h-full flex items-center justify-end pr-1 transition-all duration-300">
-                        <svg class="w-5 h-5 text-white animate-pulse transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                    <div id="hero-scroll-indicator"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none md:hidden bg-gradient-to-l from-black/80 to-transparent w-16 h-full flex items-center justify-end pr-1 transition-all duration-300">
+                        <svg class="w-5 h-5 text-white animate-pulse transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M13 5l7 7-7 7M5 5l7 7-7 7" />
                         </svg>
                     </div>
                     <!-- Pills Row spread evenly across the hero width -->
-                    <div id="hero-pills-container" onscroll="handlePillsScroll(this)" class="w-full flex flex-nowrap md:flex-wrap justify-start lg:justify-between items-center gap-3 overflow-x-auto md:overflow-visible [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] px-6 md:px-0">
-                    <span class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">MINT Baskets</span>
-                    <span class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Gifting</span>
-                    <span class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Child Account</span>
-                    <span class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Family Dashboard</span>
-                    <span class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Market Insights</span>
-                    <span class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Goals</span>
-                    <span class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Credit</span>
+                    <div id="hero-pills-container" onscroll="handlePillsScroll(this)"
+                        class="w-full flex flex-nowrap md:flex-wrap justify-start lg:justify-between items-center gap-3 overflow-x-auto md:overflow-visible [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] px-6 md:px-0">
+                        <span
+                            class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">MINT
+                            Baskets</span>
+                        <span
+                            class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Gifting</span>
+                        <span
+                            class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Child
+                            Account</span>
+                        <span
+                            class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Family
+                            Dashboard</span>
+                        <span
+                            class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Market
+                            Insights</span>
+                        <span
+                            class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Goals</span>
+                        <span
+                            class="px-6 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm font-medium whitespace-nowrap hover:bg-white/10 transition-colors">Credit</span>
                     </div>
                 </div>
                 <script>
@@ -777,7 +792,7 @@
                         const indicator = document.getElementById('hero-scroll-indicator');
                         if (!indicator) return;
                         const svg = indicator.querySelector('svg');
-                        
+
                         // Check if scrolled to the end (allow 5px margin for rounding)
                         if (Math.ceil(el.scrollLeft) >= el.scrollWidth - el.clientWidth - 5) {
                             // Reached end, point left
