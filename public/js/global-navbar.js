@@ -56,6 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     newScript.textContent = oldScript.textContent;
                     document.body.appendChild(newScript);
                 });
+
+                // Dispatch event so other scripts know navbar is ready
+                document.dispatchEvent(new Event('navbarLoaded'));
             }
         });
 
