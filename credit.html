@@ -84,6 +84,22 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+
+        /* --- LAPTOP & SHORT VIEWPORT OPTIMIZATIONS (ThinkPad & Windows laptops) --- */
+        @media (max-height: 820px) and (min-width: 768px) {
+            #hero-section {
+                min-height: 100vh;
+                padding-top: 5.5rem !important;
+                padding-bottom: 3.5rem !important;
+            }
+            #hero-section h1 {
+                font-size: 3.25rem !important;
+                margin-bottom: 0.75rem !important;
+            }
+            #allInOneSection {
+                margin-top: 2rem !important;
+            }
+        }
     </style>
 </head>
 
