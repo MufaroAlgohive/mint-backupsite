@@ -158,8 +158,12 @@
         .pillar:hover .pillar-content-open, .pillar.active .pillar-content-open { opacity: 1; transition: opacity 0.5s ease-out 0.4s; pointer-events: auto; }
 
         /* --- CAROUSEL SECTION --- */
-        #carouselSection { perspective: 1500px; height: 100vh; min-height: 800px; display: flex; flex-direction: column; justify-content: space-between; padding: 80px 0 40px; }
+        #carouselSection { perspective: 1500px; height: 100vh; min-height: 650px; display: flex; flex-direction: column; justify-content: space-between; padding: 80px 0 40px; }
         @media (max-width: 768px) { #carouselSection { height: auto; min-height: 700px; padding: 60px 0; } }
+        @media (max-height: 820px) and (min-width: 768px) {
+            #carouselSection { height: auto; min-height: 600px; padding: 50px 0 30px; }
+            .pillar-content-open { padding: 4rem 2rem !important; }
+        }
 
         .carousel-item { transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease; transform-style: preserve-3d; position: absolute; width: 340px; opacity: 0; pointer-events: none; }
         @media (max-width: 480px) { .carousel-item { width: 280px; } }
