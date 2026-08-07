@@ -46,13 +46,25 @@
     filter: brightness(0) !important;
 }
 
+#main-header.menu-open .logo-img {
+    filter: brightness(0) !important;
+    height: 5rem !important;
+    width: auto !important;
+}
+
+@media (max-width: 1023px) {
+    #main-header.menu-open .logo-img {
+        height: 5rem !important;
+    }
+}
+
 /* --- CTA BUTTON STYLE --- */
 .mint-cta-btn {
     display: inline-flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
     background-color: #f5f2ff;
-    padding: 0.35rem 0.35rem 0.35rem 1.5rem;
+    padding: 0.45rem 0.45rem 0.45rem 1.25rem;
     border-radius: 9999px;
     border: 1px solid rgba(92, 59, 207, 0.15);
     transition: all 0.3s ease;
@@ -148,8 +160,8 @@
         class="fixed top-0 left-0 w-full z-50 bg-transparent border-b border-transparent transition-all duration-300">
         <nav class="flex items-center justify-between px-6 md:px-10 py-6 max-w-7xl mx-auto">
             <a href="/index.html">
-                <img src="/images/LOGO 2 MINT.png" alt="MINT Logo"
-                    class="logo-img h-3.5 w-auto object-contain brightness-0 invert transition-all duration-300">
+                <img src="/images/myMINT.avif" alt="myMINT Logo"
+                    class="logo-img h-10 md:h-11 w-auto object-contain brightness-0 invert transition-all duration-300">
             </a>
 
             <button id="mobile-menu-btn"
@@ -241,11 +253,10 @@
             </div>
 
             <div class="hidden lg:block">
-                <button onclick="checkDevice()" class="mint-cta-btn group">
-                    <span class="text-xs font-bold text-[var(--mint-primary-purple)] uppercase tracking-wide">Go to
-                        MINT</span>
-                    <div class="mint-cta-icon" style="width: 2rem; height: 2rem;">
-                        <svg class="transition-transform duration-300" width="16" height="16" viewBox="0 0 24 24"
+                <button onclick="checkDevice()" class="mint-cta-btn group inline-flex">
+                    <span class="text-sm font-semibold text-[var(--mint-primary-purple)]">Go to myMINT</span>
+                    <div class="mint-cta-icon">
+                        <svg class="transition-transform duration-300" width="20" height="20" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2.5">
                             <path d="M7 17l10-10M7 7h10v10" />
                         </svg>
@@ -262,7 +273,7 @@
                 <!-- Top Header for Menu -->
                 <div class="flex justify-between items-center p-6 border-b border-[#222]">
                     <a href="/index.html">
-                        <img src="/images/LOGO 2 MINT.png" alt="MINT Logo" class="h-4 w-auto object-contain brightness-0 invert">
+                        <img src="/images/myMINT.avif" alt="myMINT Logo" class="h-4 w-auto object-contain brightness-0 invert">
                     </a>
                     <button id="mobile-menu-close" class="p-2 -mr-2 text-white hover:text-gray-300">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -289,7 +300,7 @@
                     </a>
                     <div class="mt-8">
                         <button onclick="checkDevice()" class="w-full flex justify-center items-center gap-2 bg-[var(--mint-primary-purple)] text-white px-7 py-4 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm">
-                            Go to MINT
+                            Go to myMINT
                         </button>
                     </div>
                 </div>

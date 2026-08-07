@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About MINT | Capital Infrastructure</title>
+    <title>About myMINT | Capital Infrastructure</title>
     <link rel="icon" type="image/png" href="/images/Mint%20Favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -198,12 +198,32 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #ffffff;
+            background-color: #31005e;
             transition: opacity 1s ease-in-out;
+        }
+
+        #preloader-video {
+            display: block;
+            width: min(72vw, 20rem);
+            max-width: 20rem;
+            height: auto;
+            object-fit: contain;
+        }
+
+        #preloader-label {
+            margin-top: 1rem;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
         }
     </style>
     <div id="video-preloader">
-        <img id="preloader-video" src="/images/Preloader.gif" alt="Loading" class="w-64 md:w-96">
+        <div class="flex flex-col items-center justify-center">
+            <img id="preloader-video" src="/videos/myMINT%20preloader.gif" alt="Loading" class="w-64 md:w-96" loop autoplay>
+            <div id="preloader-label">Loading</div>
+        </div>
     </div>
     <script>
         window.preloaderFinished = false;
@@ -241,7 +261,7 @@
             <div class="hero-overlay"></div>
             <div class="max-w-7xl w-full px-6 md:px-10 relative z-10">
                 <div class="max-w-4xl">
-                    <span class="text-white/50 font-bold text-[11px] uppercase tracking-[0.5em] mb-6 block">About MINT</span>
+                    <span class="text-white/50 font-bold text-[11px] uppercase tracking-[0.5em] mb-6 block">About myMINT</span>
                     <h1 class="text-5xl md:text-9xl font-light text-white tracking-tighter leading-[0.95] mb-8 uppercase">
                         Architecting <br class="hidden md:block">the future of <span class="text-[var(--mint-secondary)]">capital.</span>
                     </h1>
@@ -270,12 +290,12 @@
                         <div class="space-y-12 text-lg md:text-2xl font-light text-gray-600 leading-relaxed">
                             <div class="group border-l-2 border-transparent hover:border-[var(--mint-primary-purple)] pl-0 md:hover:pl-8 transition-all duration-500 ease-out">
                                 <p class="text-black font-medium text-2xl md:text-3xl mb-4 transition-transform group-hover:translate-x-2">
-                                    MINT is a modern private wealth platform built on alignment and fair access.
+                                    myMINT is a modern private wealth platform built on alignment and fair access.
                                 </p>
                             </div>
                             
                             <p>
-                                MINT exists to redefine how ambitious individuals grow, manage and leverage capital. We combine disciplined investment strategies, transparent data and intelligent technology to provide structured access across asset classes without the traditional opacity of asset management.
+                                myMINT exists to redefine how ambitious individuals grow, manage and leverage capital. We combine disciplined investment strategies, transparent data and intelligent technology to provide structured access across asset classes without the traditional opacity of asset management.
                             </p>
 
                             <div class="p-8 md:p-10 bg-[var(--mint-bg)] rounded-[2rem] md:rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-700">
@@ -286,7 +306,7 @@
                             </div>
 
                             <p>
-                                Through curated OpenStrategies, real-time tracking tools, portfolio-backed lending and seamless capital mobility, MINT delivers more than investment access. We provide financial architecture.
+                                Through curated OpenStrategies, real-time tracking tools, portfolio-backed lending and seamless capital mobility, myMINT delivers more than investment access. We provide financial architecture.
                             </p>
 
                             <div class="pt-8 flex items-center gap-6">
@@ -315,7 +335,7 @@
                             <h3 class="text-3xl md:text-5xl font-light mb-2">Lonwabo Damane, CA(SA)</h3>
                             <p class="text-xs font-bold text-[var(--mint-primary-purple)] uppercase tracking-widest mb-6 md:mb-8">Founder & CEO</p>
                             <p class="text-base md:text-lg text-gray-500 font-light leading-relaxed max-w-xl">
-                                Lonwabo is a Chartered Accountant and serial entrepreneur focused on building transparent financial infrastructure. He completed his articles at Absa, where he was named Trainee of the Year, and later joined the Markets business in the CIB division, covering banks as a rated equity analyst. Combining deep public markets expertise with hands-on venture building, he brings disciplined insight and founder-led execution to shaping and driving MINT’s strategy.
+                                Lonwabo is a Chartered Accountant and serial entrepreneur focused on building transparent financial infrastructure. He completed his articles at Absa, where he was named Trainee of the Year, and later joined the Markets business in the CIB division, covering banks as a rated equity analyst. Combining deep public markets expertise with hands-on venture building, he brings disciplined insight and founder-led execution to shaping and driving myMINT’s strategy.
                             </p>
                         </div>
                     </div>
@@ -466,7 +486,7 @@
                 <p class="text-gray-700 text-sm font-medium">Switch to your phone to continue.</p>
                 <p class="text-gray-600 text-xs">Scan the code below to open the app.</p>
             </div>
-            <img src="/images/MINTSITE.png" alt="MINT app QR code" class="w-full h-auto object-contain rounded-xl border border-gray-200 bg-white p-2 shadow-sm">
+            <img src="/images/MINTSITE.png" alt="myMINT app QR code" class="w-full h-auto object-contain rounded-xl border border-gray-200 bg-white p-2 shadow-sm">
         </div>
     </div>
     
@@ -476,7 +496,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
                 
                 <div class="space-y-6">
-                    <img src="/images/LOGO 2 WHITE MINT.png" alt="MINT Logo" loading="lazy" class="h-10 w-auto opacity-90">
+                    <img src="/images/myMINT%20White.avif" alt="myMINT Logo" loading="lazy" class="h-10 w-auto opacity-90">
                     <p class="text-gray-400 text-sm leading-relaxed">
                         The all-in-one solution for moving your money through investing, borrowing, and transacting.
                     </p>
@@ -520,9 +540,9 @@
     
                 <div class="bg-gray-900/50 p-6 rounded-2xl border border-gray-800">
                     <h4 class="text-white font-semibold mb-2">Ready to start?</h4>
-                    <p class="text-gray-400 text-xs mb-6">Join a growing group of South Africans building wealth with MINT.</p>
+                    <p class="text-gray-400 text-xs mb-6">Join a growing group of South Africans building wealth with myMINT.</p>
                     <button onclick="checkDevice()" class="w-full bg-[var(--mint-primary-purple)] hover:bg-[#4a2fb3] text-white py-3 px-6 rounded-full text-sm font-semibold transition-all flex items-center justify-center gap-2 group">
-                        Go to MINT
+                        Go to myMINT
                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </button>
                 </div>
@@ -531,11 +551,11 @@
     
             <div class="border-t border-gray-800 pt-10">
                 <div class="text-[10px] text-gray-500 text-justify leading-relaxed mb-8 opacity-60">
-                    <p>MINT (Pty) Ltd is an authorised Financial Services Provider (FSP 55118) regulated by the Financial Sector Conduct Authority and a registered Credit Provider (NCRCP22892) under the National Credit Act. All investment activity carries risk, including the possible loss of capital and liquidity constraints. Any information provided here is educational in nature, does not constitute personalised financial advice, and should not be relied on as a recommendation to buy or sell securities. Please consider whether investing is appropriate for your circumstances and consult an independent adviser where necessary.</p>
+                    <p>MINT Platforms (Pty) Ltd is an authorised Financial Services Provider (FSP 55118) regulated by the Financial Sector Conduct Authority and a registered Credit Provider (NCRCP22892) under the National Credit Act. myMINT is a product of MINT Platforms (Pty) Ltd. All investment activity carries risk, including the possible loss of capital and liquidity constraints. Any information provided here is educational in nature, does not constitute personalised financial advice, and should not be relied on as a recommendation to buy or sell securities. Please consider whether investing is appropriate for your circumstances and consult an independent adviser where necessary.</p>
                 </div>
                 
                 <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
-                    <p>&copy; 2026 MINT. All rights reserved.</p>
+                    <p>&copy; 2026 myMINT. All rights reserved.</p>
                     <div class="flex flex-wrap gap-3 sm:gap-6 items-center justify-center md:justify-end divide-x divide-gray-700">
                         <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20Advertising%20and%20Markteing%20Standards%20Statement%20(Final)%201.pdf" class="hover:text-white transition-colors px-2">Advertising and Markteing Standards Statement</a>
                         <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20AML%20Policy%20Statement%20(Final)%201.pdf" class="hover:text-white transition-colors px-2">AML Policy Statement</a>

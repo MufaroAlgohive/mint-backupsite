@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MINT | Institutional Capital Solutions</title>
+    <title>myMINT | Institutional Capital Solutions</title>
     <link rel="icon" type="image/png" href="/images/Mint%20Favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap" rel="stylesheet">
@@ -291,12 +291,32 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #ffffff;
+            background-color: #31005e;
             transition: opacity 1s ease-in-out;
+        }
+
+        #preloader-video {
+            display: block;
+            width: min(72vw, 20rem);
+            max-width: 20rem;
+            height: auto;
+            object-fit: contain;
+        }
+
+        #preloader-label {
+            margin-top: 1rem;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
         }
     </style>
     <div id="video-preloader">
-        <img id="preloader-video" src="/images/Preloader.gif" alt="Loading" class="w-64 md:w-96">
+        <div class="flex flex-col items-center justify-center">
+            <img id="preloader-video" src="/videos/myMINT%20preloader.gif" alt="Loading" class="w-64 md:w-96" loop autoplay>
+            <div id="preloader-label">Loading</div>
+        </div>
     </div>
     <script>
         window.preloaderFinished = false;
@@ -341,7 +361,7 @@
                 <h1 class="text-4xl md:text-8xl font-light text-white tracking-tight leading-[1.1] mb-6 md:mb-8 uppercase">Mandate-led.<br><span class="shimmer-text">Customised.</span><br>Strategic.</h1>
 
                 <p class="text-white/70 text-base md:text-xl font-light leading-relaxed mb-10 md:text-12 md:mb-12 max-w-2xl">
-                    Capital architecture for businesses, SMEs, corporates, family offices, private capital pools, and institutions. MINT delivers structured, tailored capital solutions.
+                    Capital architecture for businesses, SMEs, corporates, family offices, private capital pools, and institutions. myMINT delivers structured, tailored capital solutions.
                 </p>
 
                 <a href="mailto:info@mymint.co.za" class="mint-cta-btn group inline-flex" style="width: fit-content;">
@@ -400,7 +420,7 @@
     <section id="carouselSection" class="bg-[#050505] relative overflow-hidden">
         <div class="text-center w-full px-6">
             <span class="text-[var(--mint-primary-purple)] font-bold text-[9px] md:text-[10px] uppercase tracking-[0.4em] mb-4 block">Digital Capital Infrastructure & Tech Solutions</span>
-            <h2 class="text-3xl md:text-6xl font-light text-white tracking-tighter uppercase">Why businesses work with MINT:</h2>
+            <h2 class="text-3xl md:text-6xl font-light text-white tracking-tighter uppercase">Why businesses work with myMINT:</h2>
         </div>
         
        <div class="relative w-full h-[450px] flex justify-center items-center overflow-hidden">
@@ -410,7 +430,7 @@
                     <div class="metal-shine"></div>
                     <h4 class="text-[var(--mint-primary-purple)] font-bold text-[10px] uppercase mb-4">1</h4>
                     <h3 class="text-lg md:text-xl font-semibold mb-4 text-black">Bespoke Strategic Solutions</h3>
-                    <p class="text-gray-500 text-xs leading-relaxed">Every business operates within a unique financial and operational environment. MINT designs custom advisory and investment strategies tailored to each client’s objectives, capital structure, and long-term growth ambitions. No generic frameworks — only solutions built for your business.</p>
+                    <p class="text-gray-500 text-xs leading-relaxed">Every business operates within a unique financial and operational environment. myMINT designs custom advisory and investment strategies tailored to each client’s objectives, capital structure, and long-term growth ambitions. No generic frameworks — only solutions built for your business.</p>
                 </div>
             </div>
 
@@ -419,7 +439,7 @@
                     <div class="metal-shine"></div>
                     <h4 class="text-[var(--mint-primary-purple)] font-bold text-[10px] uppercase mb-4">2</h4>
                     <h3 class="text-lg md:text-xl font-semibold mb-4 text-black">Institutional-Grade Technology Development</h3>
-                    <p class="text-gray-500 text-xs leading-relaxed">MINT designs and builds custom technology platforms for businesses across financial and operational environments. From digital financial platforms and investment infrastructure to internal business systems and automation tools, we develop purpose-built technology solutions that solve real operational challenges and unlock scale.</p>
+                    <p class="text-gray-500 text-xs leading-relaxed">myMINT designs and builds custom technology platforms for businesses across financial and operational environments. From digital financial platforms and investment infrastructure to internal business systems and automation tools, we develop purpose-built technology solutions that solve real operational challenges and unlock scale.</p>
                 </div>
             </div>
 
@@ -428,7 +448,7 @@
                     <div class="metal-shine"></div>
                     <h4 class="text-[var(--mint-primary-purple)] font-bold text-[10px] uppercase mb-4">3</h4>
                     <h3 class="text-lg md:text-xl font-semibold mb-4 text-black">Strategy That Gets Implemented</h3>
-                    <p class="text-gray-500 text-xs leading-relaxed">Many advisory firms deliver recommendations. MINT delivers working solutions. We partner with businesses from strategy through execution — implementing investment strategies, deploying technology platforms, and building systems that enable better financial and operational decision-making.</p>
+                    <p class="text-gray-500 text-xs leading-relaxed">Many advisory firms deliver recommendations. myMINT delivers working solutions. We partner with businesses from strategy through execution — implementing investment strategies, deploying technology platforms, and building systems that enable better financial and operational decision-making.</p>
                 </div>
             </div>
 
@@ -440,7 +460,7 @@
                 <button onclick="nextCarousel()" class="p-3 rounded-full border border-white/10 hover:bg-white/5 transition-all"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9 5l6 6-6 6"/></svg></button>
             </div>
             <p class="text-white text-sm md:text-lg font-light italic leading-relaxed text-center max-w-5xl">
-                "Traditional asset managers are product-driven with limited flexibility; consultants are strategy-heavy and execution-light; tech vendors are software-only with no capital expertise. MINT delivers strategy, structure, execution, technology, and regulatory alignment in one integrated solution."
+                "Traditional asset managers are product-driven with limited flexibility; consultants are strategy-heavy and execution-light; tech vendors are software-only with no capital expertise. myMINT delivers strategy, structure, execution, technology, and regulatory alignment in one integrated solution."
             </p>
         </div>
     </section>
@@ -485,7 +505,7 @@
                     <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-12 w-full text-left">
                         <span class="text-5xl md:text-6xl font-light">Synergy</span>
                         <div class="hidden lg:block h-16 w-[1px] bg-white/20"></div>
-                        <p class="text-white/90 text-base md:text-lg max-w-4xl font-light leading-relaxed">Strategic positioning: Retail—democratising capital access. Commercial—architecting institutional capital efficiency. MINT is not just an investment platform; it is a capital infrastructure company.</p>
+                        <p class="text-white/90 text-base md:text-lg max-w-4xl font-light leading-relaxed">Strategic positioning: Retail—democratising capital access. Commercial—architecting institutional capital efficiency. myMINT is not just an investment platform; it is a capital infrastructure company.</p>
                     </div>
                 </div>
             </div>
@@ -497,7 +517,7 @@
             <h5 class="text-[var(--mint-primary-purple)] font-bold text-sm uppercase tracking-wider">Open on mobile</h5>
             <p class="text-gray-700 text-sm font-medium">Switch to your phone to continue.</p>
             <p class="text-gray-600 text-xs">Scan the code below to open the app.</p>
-            <img src="/images/MINTSITE.png" alt="MINT app QR code" class="w-full h-auto object-contain rounded-xl border border-gray-200 bg-white p-2 shadow-sm">
+            <img src="/images/MINTSITE.png" alt="myMINT app QR code" class="w-full h-auto object-contain rounded-xl border border-gray-200 bg-white p-2 shadow-sm">
         </div>
     </div>
     
@@ -507,7 +527,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
                 
                 <div class="space-y-6">
-                    <img src="/images/LOGO 2 WHITE MINT.png" alt="MINT Logo" loading="lazy" class="h-10 w-auto opacity-90">
+                    <img src="/images/myMINT%20White.avif" alt="myMINT Logo" loading="lazy" class="h-10 w-auto opacity-90">
                     <p class="text-gray-400 text-sm leading-relaxed">
                         The all-in-one solution for moving your money through investing, borrowing, and transacting.
                     </p>
@@ -551,9 +571,9 @@
     
                 <div class="bg-gray-900/50 p-6 rounded-2xl border border-gray-800">
                     <h4 class="text-white font-semibold mb-2">Ready to start?</h4>
-                    <p class="text-gray-400 text-xs mb-6">Join a growing group of South Africans building wealth with MINT.</p>
+                    <p class="text-gray-400 text-xs mb-6">Join a growing group of South Africans building wealth with myMINT.</p>
                     <button onclick="checkDevice()" class="w-full bg-[var(--mint-primary-purple)] hover:bg-[#4a2fb3] text-white py-3 px-6 rounded-full text-sm font-semibold transition-all flex items-center justify-center gap-2 group">
-                        Go to MINT
+                        Go to myMINT
                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </button>
                 </div>
@@ -562,11 +582,11 @@
     
             <div class="border-t border-gray-800 pt-10">
                 <div class="text-[10px] text-gray-500 text-justify leading-relaxed mb-8 opacity-60">
-                    <p>MINT (Pty) Ltd is an authorised Financial Services Provider (FSP 55118) regulated by the Financial Sector Conduct Authority and a registered Credit Provider (NCRCP22892) under the National Credit Act. All investment activity carries risk, including the possible loss of capital and liquidity constraints. Any information provided here is educational in nature, does not constitute personalised financial advice, and should not be relied on as a recommendation to buy or sell securities. Please consider whether investing is appropriate for your circumstances and consult an independent adviser where necessary.</p>
+                    <p>MINT Platforms (Pty) Ltd is an authorised Financial Services Provider (FSP 55118) regulated by the Financial Sector Conduct Authority and a registered Credit Provider (NCRCP22892) under the National Credit Act. myMINT is a product of MINT Platforms (Pty) Ltd. All investment activity carries risk, including the possible loss of capital and liquidity constraints. Any information provided here is educational in nature, does not constitute personalised financial advice, and should not be relied on as a recommendation to buy or sell securities. Please consider whether investing is appropriate for your circumstances and consult an independent adviser where necessary.</p>
                 </div>
                 
                 <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
-                    <p>&copy; 2026 MINT. All rights reserved.</p>
+                    <p>&copy; 2026 myMINT. All rights reserved.</p>
                     <div class="flex flex-wrap gap-3 sm:gap-6 items-center justify-center md:justify-end divide-x divide-gray-700">
                         <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20Advertising%20and%20Markteing%20Standards%20Statement%20(Final)%201.pdf" class="hover:text-white transition-colors px-2">Advertising and Markteing Standards Statement</a>
                         <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20AML%20Policy%20Statement%20(Final)%201.pdf" class="hover:text-white transition-colors px-2">AML Policy Statement</a>
