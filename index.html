@@ -36,7 +36,7 @@
       "@type": "FinancialService",
       "name": "MINT Platforms",
       "url": "https://mymint.co.za",
-      "logo": "https://mymint.co.za/images/LOGO%202%20MINT.png",
+      "logo": "https://mymint.co.za/images/myMINT.avif",
       "description": "Authorised Financial Services Provider (FSP 55118) and registered Credit Provider (NCRCP22892) based in Sandton",
       "address": {
         "@type": "PostalAddress",
@@ -259,6 +259,18 @@
             filter: brightness(0) !important;
         }
 
+        #main-header.menu-open .logo-img {
+            filter: brightness(0) !important;
+            height: 5rem !important;
+            width: auto !important;
+        }
+
+        @media (max-width: 1023px) {
+            #main-header.menu-open .logo-img {
+                height: 5rem !important;
+            }
+        }
+
         /* --- CTA BUTTON STYLE --- */
         .mint-cta-btn {
             display: inline-flex;
@@ -335,6 +347,17 @@
             transform: translateY(-50%);
             z-index: 25;
             width: 100%;
+        }
+
+        .hero-initial .mint-cta-btn {
+            gap: 0.75rem;
+            padding: 0.45rem 0.45rem 0.45rem 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-initial .mint-cta-icon {
+            width: 1.8rem;
+            height: 1.8rem;
         }
 
         .hero-bg-image {
@@ -760,12 +783,32 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #ffffff;
+            background-color: #31005e;
             transition: opacity 1s ease-in-out;
+        }
+
+        #preloader-video {
+            display: block;
+            width: min(72vw, 20rem);
+            max-width: 20rem;
+            height: auto;
+            object-fit: contain;
+        }
+
+        #preloader-label {
+            margin-top: 1rem;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
         }
     </style>
     <div id="video-preloader">
-        <img id="preloader-video" src="/images/Preloader.gif" alt="Loading" class="w-64 md:w-96">
+        <div class="flex flex-col items-center justify-center">
+            <img id="preloader-video" src="/videos/myMINT%20preloader.gif" alt="Loading" class="w-64 md:w-96" loop autoplay>
+            <div id="preloader-label">Loading</div>
+        </div>
     </div>
     <script>
         window.preloaderFinished = false;
@@ -840,7 +883,7 @@
                 </div>
 
                 <!-- Pills Row Container -->
-                <div class="relative w-full mt-16 md:mt-24">
+                <div class="relative w-full mt-32 md:mt-36" style="transform: translateY(-40px);">
                     <!-- Flashing arrow indicator for mobile -->
                     <div id="hero-scroll-indicator"
                         class="absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none md:hidden bg-gradient-to-l from-black/80 to-transparent w-16 h-full flex items-center justify-end pr-1 transition-all duration-300">
@@ -1025,12 +1068,12 @@
                         </div>
                     </div>
                     <!-- GIF -->
-                    <div class="flex flex-col justify-center items-center h-full w-full">
+                    <div class="flex flex-col justify-center items-center h-full w-full lg:items-end">
                         <div
-                            class="relative inline-flex flex-col items-center justify-center w-full sm:max-w-[672px] md:max-w-[800px]">
+                            class="relative inline-flex flex-col items-center justify-center w-full lg:w-[50vw] lg:max-w-[640px]">
                             <!-- Top Left: Profile Icon -->
                             <div
-                                class="absolute top-4 left-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
+                                class="absolute top-4 left-4 z-20 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1040,7 +1083,7 @@
 
                             <!-- Top Right: Cart Icon with Notification -->
                             <div
-                                class="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
+                                class="absolute top-4 right-4 z-20 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1055,7 +1098,7 @@
                             </div>
 
                             <img src="/videos/Comp%201_1.gif" alt="MINT Baskets" loading="eager"
-                                class="w-full h-auto rounded-2xl object-contain relative z-0">
+                                class="w-full h-[320px] sm:h-[420px] lg:h-[70vh] lg:max-h-[720px] rounded-2xl object-cover relative z-0">
                         </div>
                     </div>
                 </div>
@@ -1082,12 +1125,12 @@
                         </div>
                     </div>
                     <!-- GIF with Icons -->
-                    <div class="flex flex-col justify-center items-center h-full w-full">
+                    <div class="flex flex-col justify-center items-center h-full w-full lg:items-end">
                         <div
-                            class="relative inline-flex flex-col items-center justify-center w-full sm:max-w-[672px] md:max-w-[800px]">
+                            class="relative inline-flex flex-col items-center justify-center w-full lg:w-[50vw] lg:max-w-[640px]">
                             <!-- Top Left: Profile Icon -->
                             <div
-                                class="absolute top-4 left-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
+                                class="absolute top-4 left-4 z-20 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1097,7 +1140,7 @@
 
                             <!-- Top Right: Gift Icon with Notification -->
                             <div
-                                class="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
+                                class="absolute top-4 right-4 z-20 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-gray-800 cursor-pointer hover:bg-white transition-colors">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -1115,7 +1158,7 @@
                             </div>
 
                             <img src="/videos/Comp%201_3.gif" alt="MINT Gift" loading="eager"
-                                class="w-full h-auto rounded-2xl object-contain relative z-0">
+                                class="w-full h-[320px] sm:h-[420px] lg:h-[70vh] lg:max-h-[720px] rounded-2xl object-cover relative z-0">
                         </div>
                     </div>
                 </div>
@@ -1377,7 +1420,7 @@
                     </h2>
                     <p class="text-white/80 text-lg md:text-2xl font-light leading-relaxed mb-12 max-w-2xl">
                         This pillar focuses on creating smarter ways for users to make and receive payments, while
-                        positioning MINT as a central platform for moving money in real time.
+                        positioning myMINT as a central platform for moving money in real time.
                     </p>
 
                     <div
@@ -1423,7 +1466,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
 
                 <div class="space-y-6">
-                    <img src="/images/LOGO 2 WHITE MINT.png" alt="MINT Logo" loading="lazy"
+                    <img src="/images/myMINT%20White.avif" alt="MINT Logo" loading="lazy"
                         class="h-10 w-auto opacity-90">
                     <p class="text-gray-400 text-sm leading-relaxed">
                         The all-in-one solution for moving your money through investing, borrowing, and transacting.
@@ -1495,10 +1538,10 @@
                 <div class="bg-gray-900/50 p-6 rounded-2xl border border-gray-800">
                     <h4 class="text-white font-semibold mb-2">Ready to start?</h4>
                     <p class="text-gray-400 text-xs mb-6">Join a growing group of South Africans building wealth with
-                        MINT.</p>
+                        myMINT.</p>
                     <button onclick="checkDevice()"
                         class="w-full bg-[var(--mint-primary-purple)] hover:bg-[#4a2fb3] text-white py-3 px-6 rounded-full text-sm font-semibold transition-all flex items-center justify-center gap-2 group">
-                        Go to MINT
+                        Go to myMINT
                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1511,17 +1554,11 @@
 
             <div class="border-t border-gray-800 pt-10">
                 <div class="text-[10px] text-gray-500 text-justify leading-relaxed mb-8 opacity-60">
-                    <p>MINT (Pty) Ltd is an authorised Financial Services Provider (FSP 55118) regulated by the
-                        Financial Sector Conduct Authority and a registered Credit Provider (NCRCP22892) under the
-                        National Credit Act. All investment activity carries risk, including the possible loss of
-                        capital and liquidity constraints. Any information provided here is educational in nature, does
-                        not constitute personalised financial advice, and should not be relied on as a recommendation to
-                        buy or sell securities. Please consider whether investing is appropriate for your circumstances
-                        and consult an independent adviser where necessary.</p>
+                    <p>MINT (Pty) Ltd is an authorised Financial Services Provider (FSP 55118) regulated by the Financial Sector Conduct Authority and a registered Credit Provider (NCRCP22892) under the National Credit Act. myMINT is a product of MINT Platforms (Pty) Ltd. All investment activity carries risk, including the possible loss of capital and liquidity constraints. Any information provided here is educational in nature, does not constitute personalised financial advice, and should not be relied on as a recommendation to buy or sell securities. Please consider whether investing is appropriate for your circumstances and consult an independent adviser where necessary.</p>
                 </div>
 
                 <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
-                    <p>&copy; 2026 MINT. All rights reserved.</p>
+                    <p>&copy; 2026 myMINT. All rights reserved.</p>
                     <div
                         class="flex flex-wrap gap-3 sm:gap-6 items-center justify-center md:justify-end divide-x divide-gray-700">
                         <a href="https://mfxnghmuccevsxwcetej.supabase.co/storage/v1/object/public/Mint%20Assets/Legal%20Docs/2026.06.17%20-%20MINT%20Advertising%20and%20Markteing%20Standards%20Statement%20(Final)%201.pdf"
