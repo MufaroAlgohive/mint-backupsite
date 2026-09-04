@@ -287,60 +287,68 @@
         #video-preloader {
             position: fixed;
             inset: 0;
-            z-index: 9999;
+            z-index: 999999;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #31005e;
+            background-color: #0b0616;
             transition: opacity 1s ease-in-out;
         }
 
         #preloader-video {
             display: block;
-            width: min(72vw, 20rem);
-            max-width: 20rem;
-            height: auto;
-            object-fit: contain;
-        }
-
-        #preloader-label {
-            margin-top: 1rem;
-            color: #ffffff;
-            font-size: 0.95rem;
-            font-weight: 500;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
     <div id="video-preloader">
-        <div class="flex flex-col items-center justify-center">
-            <img id="preloader-video" src="/videos/myMINT%20preloader.gif" alt="Loading" class="w-64 md:w-96" loop autoplay>
-            <div id="preloader-label">Loading</div>
-        </div>
+        <video id="preloader-video" src="/videos/splash.mp4" autoplay muted playsinline></video>
     </div>
     <script>
         window.preloaderFinished = false;
+        
         const preloader = document.getElementById('video-preloader');
-
-        function hidePreloader() {
-            if (!preloader) return;
-            preloader.style.opacity = '0';
-            setTimeout(() => {
-                preloader.style.display = 'none';
-                document.body.style.overflow = 'auto';
-                window.preloaderFinished = true;
-                window.dispatchEvent(new Event('preloaderComplete'));
-            }, 500);
+        const video = document.getElementById('preloader-video');
+        
+        let isPageLoaded = document.readyState === 'complete';
+        let isVideoEnded = false;
+        
+        function tryHidePreloader() {
+            if (isPageLoaded && isVideoEnded && !window.preloaderFinished) {
+                if (preloader) preloader.style.opacity = '0';
+                setTimeout(() => {
+                    if (preloader) preloader.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                    window.preloaderFinished = true;
+                    window.dispatchEvent(new Event('preloaderComplete'));
+                }, 1000); // Wait for transition
+            }
         }
 
-        if (document.readyState === 'complete') {
-            if (preloader) preloader.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            window.preloaderFinished = true;
-            window.dispatchEvent(new Event('preloaderComplete'));
+        if (video) {
+            video.addEventListener('ended', () => {
+                isVideoEnded = true;
+                tryHidePreloader();
+            });
+            // Failsafe in case video can't load/play
+            setTimeout(() => {
+                isVideoEnded = true;
+                tryHidePreloader();
+            }, 8000);
         } else {
+            isVideoEnded = true;
+        }
+
+        window.addEventListener('load', () => {
+            isPageLoaded = true;
+            tryHidePreloader();
+        });
+        
+        if (!isPageLoaded) {
             document.body.style.overflow = "hidden";
-            window.addEventListener('load', hidePreloader);
+        } else {
+            tryHidePreloader();
         }
     </script>
 
